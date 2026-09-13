@@ -40,7 +40,12 @@ def registrar(pred, fixtures, ahora=None):
             "bajas_v": (con["bajas"]["V"] or {}).get("pct", np.nan),
             **cuotas,
         })
-    nuevo = pd.concat([previo, pd.DataFrame(filas)], ignore_index=True) if filas else previo
+    if not filas:
+        nuevo = previo
+    elif previo.empty:
+        nuevo = pd.DataFrame(filas)
+    else:
+        nuevo = pd.concat([previo, pd.DataFrame(filas)], ignore_index=True)
     nuevo.to_csv(RUTA, index=False)
     return len(filas)
 

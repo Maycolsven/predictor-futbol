@@ -63,7 +63,7 @@ def predecir_fixtures(_pred, version, ligas, dias):
         if not (_pred.conoce(r.local) and _pred.conoce(r.visita)):
             continue
         cuotas = {c: getattr(r, c, np.nan) for c in ("cuota_l", "cuota_e", "cuota_v", "cuota_o25", "cuota_u25")}
-        salida.append((r, _pred.partido(r.local, r.visita, r.competicion, fecha=r.fecha, cuotas=cuotas)))
+        salida.append((r._asdict(), _pred.partido(r.local, r.visita, r.competicion, fecha=r.fecha, cuotas=cuotas)))
     return salida
 
 
@@ -266,19 +266,28 @@ with tab_prox:
         lista = predecir_fixtures(pred, version_datos(), tuple(elegidas), dias)
         if not lista:
             st.info("No hay partidos para ese filtro.")
-        st.caption("Haz clic en un partido para ver el detalle. **+2.5** = probabilidad de 3 goles o más.")
-        fecha_actual = None
-        for i, (r, p) in enumerate(lista):
-            if r.fecha != fecha_actual:
-                fecha_actual = r.fecha
-                st.subheader(f"{DIAS_SEMANA[r.fecha.weekday()]} {r.fecha:%d/%m}")
-            gl, gv, _ = p["top"][0]
-            hora = "" if pd.isna(r.hora) else f"{r.hora} · "
-            etiqueta = (f"{hora}{NOMBRE_LIGA[r.competicion]} · **{r.local} vs {r.visita}** — "
-                        f"{favorito(p['1x2'], r.local, r.visita)} · +2.5: {p['over']['2.5']:.0%} · {gl}-{gv}")
-            with st.expander(etiqueta):
-                cuotas = {c: getattr(r, c, np.nan) for c in ("cuota_l", "cuota_e", "cuota_v")}
-                mostrar_detalle(p, r.local, r.visita, cuotas, clave=f"fx{i}")
+        else:
+            st.caption("Haz clic en un partido para ver el detalle debajo. **+2.5** = probabilidad de 3 goles o más.")
+            filas = []
+            for r, p in lista:
+                gl, gv, _ = p["top"][0]
+                filas.append({"Fecha": f"{DIAS_SEMANA[r['fecha'].weekday()][:3]} {r['fecha']:%d/%m}",
+                              "Hora": "" if pd.isna(r["hora"]) else r["hora"],
+                              "Liga": NOMBRE_LIGA[r["competicion"]],
+                              "Partido": f"{r['local']} vs {r['visita']}",
+                              "Pronóstico": favorito(p["1x2"], r["local"], r["visita"]),
+                              "+2.5": p["over"]["2.5"] * 100, "Marcador": f"{gl}-{gv}"})
+            evento = st.dataframe(pd.DataFrame(filas), hide_index=True, width="stretch",
+                                  height=min(600, 38 + 35 * len(filas)), on_select="rerun",
+                                  selection_mode="single-row", column_config={"+2.5": PCT})
+            sel = evento.selection.rows
+            if sel:
+                r, p = lista[sel[0]]
+                st.subheader(f"{r['local']} vs {r['visita']} · {NOMBRE_LIGA[r['competicion']]} · {r['fecha']:%d/%m}")
+                cuotas = {c: r.get(c, np.nan) for c in ("cuota_l", "cuota_e", "cuota_v")}
+                mostrar_detalle(p, r["local"], r["visita"], cuotas, clave="fx")
+            else:
+                st.info("👆 Selecciona un partido de la lista para ver el detalle.")
 
 
 # ---------------------------------------------------------------- enfrentamiento

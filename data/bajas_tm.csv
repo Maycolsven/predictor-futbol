@@ -1,0 +1,644 @@
+jugador,posicion,club_tm,club_id,lesion,hasta_txt,valor,div
+Amad Diallo,Right Winger,Manchester United,985,Knock,,45000000.0,E0
+Azor Matusiwa,Defensive Midfield,Ipswich Town,677,Knee surgery,,12000000.0,E0
+Florentino,Defensive Midfield,Ipswich Town,677,Calf problems,,16000000.0,E0
+Jack Taylor,Central Midfield,Ipswich Town,677,Knee surgery,,3000000.0,E0
+Jaden Philogene,Left Winger,Ipswich Town,677,Ankle injury,,20000000.0,E0
+Dan Burn,Centre-Back,Newcastle United,762,Ankle injury,,4000000.0,E0
+Joelinton,Central Midfield,Newcastle United,762,unknown injury,,25000000.0,E0
+Tino Livramento,Right-Back,Newcastle United,762,Knee injury,,45000000.0,E0
+William Osula,Centre-Forward,Newcastle United,762,Foot injury,,28000000.0,E0
+Ismaïla Sarr,Right Winger,Crystal Palace,873,Groin injury,,45000000.0,E0
+Jean-Philippe Mateta,Centre-Forward,Crystal Palace,873,Hamstring injury,,30000000.0,E0
+Chadi Riad,Centre-Back,Crystal Palace,873,Knee surgery,,20000000.0,E0
+Manuel Ugarte,Defensive Midfield,Manchester United,985,Cruciate ligament tear,,25000000.0,E0
+William Saliba,Centre-Back,Arsenal FC,11,Back injury,,100000000.0,E0
+Junior Kroupi,Centre-Forward,AFC Bournemouth,989,Foot injury,,70000000.0,E0
+Benjamin Fredrick,Centre-Back,Brentford FC,1148,Knee injury,,600000.0,E0
+Mats Wieffer,Right-Back,Brighton & Hove Albion,1237,Knee injury,,25000000.0,E0
+Kaoru Mitoma,Left Winger,Brighton & Hove Albion,1237,Hamstring injury,,22000000.0,E0
+Georginio Rutter,Centre-Forward,Brighton & Hove Albion,1237,Foot injury,,30000000.0,E0
+Evan Ferguson,Centre-Forward,Brighton & Hove Albion,1237,Ankle problems,,20000000.0,E0
+Jack Hinshelwood,Defensive Midfield,Brighton & Hove Albion,1237,unknown injury,,28000000.0,E0
+Stefanos Tzimas,Centre-Forward,Brighton & Hove Albion,1237,Cruciate ligament tear,,18000000.0,E0
+Yankuba Minteh,Right Winger,Brighton & Hove Albion,1237,Foot injury,,45000000.0,E0
+Joe Gelhardt,Centre-Forward,Hull City,3008,Ankle injury,,14000000.0,E0
+Darko Gyabi,Central Midfield,Hull City,3008,Groin injury,,2000000.0,E0
+Ilyas Ansah,Centre-Forward,Hull City,3008,Back problems,,12000000.0,E0
+Moisés Caicedo,Defensive Midfield,Chelsea FC,631,unknown injury,,100000000.0,E0
+Jurriën Timber,Right-Back,Arsenal FC,11,Groin injury,,70000000.0,E0
+Cristhian Mosquera,Centre-Back,Arsenal FC,11,Hamstring injury,,40000000.0,E0
+Christian Nørgaard,Defensive Midfield,Everton FC,29,Groin injury,,5000000.0,E0
+Joe Gomez,Centre-Back,Liverpool FC,31,Muscle injury,,13000000.0,E0
+Conor Bradley,Right-Back,Liverpool FC,31,Knee surgery,,25000000.0,E0
+James Maddison,Attacking Midfield,Tottenham Hotspur,148,Shoulder injury,,20000000.0,E0
+Jérémy Doku,Left Winger,Manchester City,281,Calf injury,,75000000.0,E0
+Marco Palestra,Right-Back,Chelsea FC,631,unknown injury,,35000000.0,E0
+Jordan Henderson,Central Midfield,Chelsea FC,631,Forearm fracture,,1200000.0,E0
+Brian Madjo,Centre-Forward,Aston Villa,405,Ankle injury,,12000000.0,E0
+Johan Manzambi,Attacking Midfield,Aston Villa,405,Knee bruise,,65000000.0,E0
+Amadou Onana,Defensive Midfield,Aston Villa,405,Cruciate ligament tear,,45000000.0,E0
+Ilia Gruev,Defensive Midfield,Leeds United,399,Knee injury,14/09/2026,12000000.0,E0
+Mathias Jensen,Central Midfield,Brentford FC,1148,Muscle strain,14/09/2026,10000000.0,E0
+Carlos Baleba,Defensive Midfield,Manchester United,985,Ankle injury,17/09/2026,55000000.0,E0
+Federico Chiesa,Right Winger,Liverpool FC,31,Muscle injury,27/09/2026,13000000.0,E0
+Vitezslav Jaros,Goalkeeper,Liverpool FC,31,Knee injury,01/10/2026,5000000.0,E0
+Josh Dasilva,Central Midfield,Brentford FC,1148,Hamstring injury,06/10/2026,1500000.0,E0
+Sepp van den Berg,Centre-Back,Brentford FC,1148,Groin injury,06/10/2026,32000000.0,E0
+Leon Goretzka,Central Midfield,Aston Villa,405,unknown injury,06/10/2026,12000000.0,E0
+Tom Cairney,Central Midfield,Fulham FC,931,Knee surgery,09/10/2026,500000.0,E0
+Nicolò Savona,Right-Back,Nottingham Forest,703,Knee injury,11/10/2026,15000000.0,E0
+Habib Diarra,Central Midfield,Sunderland AFC,289,Hamstring injury,16/10/2026,35000000.0,E0
+Charlie Hughes,Centre-Back,Hull City,3008,Inguinal hernia,24/10/2026,10000000.0,E0
+Giovanni Leoni,Centre-Back,Liverpool FC,31,Cruciate ligament tear,31/10/2026,25000000.0,E0
+Joe Rodon,Centre-Back,Leeds United,399,Hamstring injury,08/11/2026,18000000.0,E0
+Mykhaylo Mudryk,Left Winger,Tottenham Hotspur,148,Ankle injury,09/11/2026,15000000.0,E0
+Haji Wright,Centre-Forward,Coventry City,990,Thigh problems,11/11/2026,16000000.0,E0
+Wilson Odobert,Left Winger,Tottenham Hotspur,148,Cruciate ligament tear,28/11/2026,18000000.0,E0
+Eliot Matazo,Central Midfield,Hull City,3008,Cruciate ligament tear,30/11/2026,1500000.0,E0
+Hugo Ekitiké,Centre-Forward,Liverpool FC,31,Achilles tendon rupture,31/12/2026,80000000.0,E0
+Mateo Joseph,Centre-Forward,Leeds United,399,Cruciate ligament tear,01/02/2027,3500000.0,E0
+Xavi Simons,Attacking Midfield,Tottenham Hotspur,148,Cruciate ligament tear,20/02/2027,40000000.0,E0
+Federico Ravaglia,Goalkeeper,Watford FC,1010,Lumbago,,1800000.0,E1
+Micah Mbick,Centre-Forward,Charlton Athletic,358,Knee injury,,175000.0,E1
+Craig Forsyth,Left-Back,Derby County,22,Knee injury,,50000.0,E1
+Theo Carroll,Attacking Midfield,Preston North End,466,Ankle injury,,,E1
+Junior Tchamadeu,Right-Back,Stoke City,512,Knee injury,,2500000.0,E1
+Dylan Lawlor,Centre-Back,Cardiff City,603,Knee injury,,1800000.0,E1
+Luke McNally,Centre-Back,Bristol City,698,Cruciate ligament injury,,2000000.0,E1
+Cameron Pring,Left-Back,Bristol City,698,Ankle injury,,2000000.0,E1
+Mikey Johnston,Left Winger,West Bromwich Albion,984,fatigue fracture,,4000000.0,E1
+Daniel Bachmann,Goalkeeper,Watford FC,1010,unknown injury,,400000.0,E1
+Tomáš Souček,Defensive Midfield,West Ham United,379,Ankle injury,,10000000.0,E1
+Jacob Farrell,Left-Back,Portsmouth FC,1020,Groin injury,,450000.0,E1
+Tristan Crama,Centre-Back,Millwall FC,1028,Ankle injury,,12000000.0,E1
+Jimmy Dunne,Centre-Back,Queens Park Rangers,1039,Knee injury,,5000000.0,E1
+Justin Obikwu,Centre-Forward,Queens Park Rangers,1039,Shin injury,,125000.0,E1
+Sebastian Revan,Left-Back,Wrexham AFC,1112,Hamstring injury,,500000.0,E1
+Mirko Topic,Defensive Midfield,Norwich City,1123,Cruciate ligament tear,,4000000.0,E1
+Josh Honohan,Left-Back,Lincoln City,1198,unknown injury,,250000.0,E1
+Mason Melia,Centre-Forward,Lincoln City,1198,Thigh problems,,1000000.0,E1
+Cameron Burgess,Centre-Back,Swansea City,2288,Achilles tendon rupture,,1500000.0,E1
+Femi Seriki,Right-Back,Sheffield United,350,Knee injury,,5000000.0,E1
+Carlton Morris,Centre-Forward,Derby County,22,Calf muscle tear,,4500000.0,E1
+Matt Clarke,Centre-Back,Derby County,22,Calf injury,,2000000.0,E1
+Lewis Travis,Defensive Midfield,Derby County,22,Leg injury,,1800000.0,E1
+Rhian Brewster,Centre-Forward,Derby County,22,concussion,,2500000.0,E1
+Derry Murkin,Left-Back,Derby County,22,Hamstring injury,,1500000.0,E1
+Patrick Agyemang,Centre-Forward,Derby County,22,Achilles tendon rupture,,10000000.0,E1
+Scott Wharton,Centre-Back,Blackburn Rovers,164,Achilles tendon problems,,1300000.0,E1
+Augustus Kargbo,Second Striker,Blackburn Rovers,164,Hamstring injury,,1000000.0,E1
+Ryan Manning,Left-Back,Southampton FC,180,unknown injury,,2800000.0,E1
+Mads Roerslev,Right-Back,Southampton FC,180,Knee injury,,4000000.0,E1
+Finn Azaz,Attacking Midfield,Southampton FC,180,unknown injury,,20000000.0,E1
+Caspar Jander,Central Midfield,Southampton FC,180,Hamstring injury,,18000000.0,E1
+Max Bird,Central Midfield,Birmingham City,337,Calf injury,,2500000.0,E1
+Lee Buchanan,Left-Back,Birmingham City,337,Cruciate ligament injury,,1200000.0,E1
+Jamie Shackleton,Right-Back,Sheffield United,350,Foot injury,,1000000.0,E1
+Luca Stephenson,Right-Back,Bolton Wanderers,355,Strain in the thigh and gluteal muscles,,1000000.0,E1
+Josh Cullen,Central Midfield,Burnley FC,1132,Cruciate ligament tear,01/10/2026,4000000.0,E1
+Dastan Satpaev,Centre-Forward,Burnley FC,1132,Hamstring injury,04/10/2026,3500000.0,E1
+Márk Kosznovszky,Central Midfield,Portsmouth FC,1020,Knee injury,01/11/2026,1000000.0,E1
+Lewis Miller,Right-Back,Blackburn Rovers,164,Achilles tendon rupture,15/11/2026,1200000.0,E1
+Marc Leonard,Central Midfield,Birmingham City,337,Achilles tendon rupture,31/12/2026,2000000.0,E1
+Tendayi Darikwa,Right-Back,Lincoln City,1198,Cruciate ligament tear,30/06/2027,200000.0,E1
+Raúl de Tomás,Centre-Forward,Rayo Vallecano,367,unknown injury,,400000.0,SP1
+Rubén Vargas,Left Winger,Sevilla FC,368,Knee problems,,15000000.0,SP1
+Éder Militão,Centre-Back,Real Madrid,418,Muscle injury,,20000000.0,SP1
+Andrés Martín,Right Winger,Racing Santander,630,Knee injury,,8000000.0,SP1
+Simon Eriksson,Goalkeeper,Racing Santander,630,Tendonitis,,2000000.0,SP1
+Noé Carrillo,Central Midfield,Deportivo A Coruña,897,Ankle injury,,1000000.0,SP1
+Kike García,Centre-Forward,RCD Espanyol Barcelona,714,Muscle injury,,700000.0,SP1
+Aitor Ruibal,Right Winger,Real Betis Balompié,150,Meniscus injury,14/09/2026,4000000.0,SP1
+Rodrygo,Right Winger,Real Madrid,418,Cruciate ligament tear,30/09/2026,45000000.0,SP1
+Mouctar Diakhaby,Centre-Back,Valencia CF,1049,Muscle injury,09/10/2026,1500000.0,SP1
+Sergi Canós,Left Winger,Valencia CF,1049,Cruciate ligament tear,01/11/2026,600000.0,SP1
+Umar Sadiq,Centre-Forward,Valencia CF,1049,Hamstring injury,02/11/2026,4000000.0,SP1
+Augusto Batalla,Goalkeeper,Rayo Vallecano,367,Lower leg fracture,22/11/2026,6000000.0,SP1
+Frenkie de Jong,Central Midfield,FC Barcelona,131,Knee medial ligament tear,30/11/2026,35000000.0,SP1
+Álvaro Odriozola,Right-Back,Real Sociedad,681,Cruciate ligament tear,30/11/2026,800000.0,SP1
+Diego López,Right Winger,Valencia CF,1049,Cruciate ligament tear,01/03/2027,9000000.0,SP1
+Unai Egiluz,Centre-Back,Athletic Bilbao,621,Cruciate ligament tear,06/03/2027,400000.0,SP1
+Mikel Rodriguez,Central Midfield,Deportivo Alavés,1108,Cruciate ligament tear,04/04/2027,700000.0,SP1
+Ferland Mendy,Left-Back,Real Madrid,418,Tendon rupture,30/04/2027,4000000.0,SP1
+Roony Bardghji,Right Winger,FC Barcelona,131,Cruciate ligament tear,10/05/2027,15000000.0,SP1
+Julen Lobete,Left Winger,Málaga CF,1084,Cruciate ligament tear,30/06/2027,1200000.0,SP1
+Christantus Uche,Centre-Forward,Getafe CF,3709,Knee injury,30/06/2027,12000000.0,SP1
+Jan Salas,Central Midfield,RCD Mallorca,237,Partial damage to the cruciate ligament,,500000.0,SP2
+Álex Suárez,Centre-Back,UD Las Palmas,472,Muscle injury,,500000.0,SP2
+Alassan Manjam,Left Winger,CD Tenerife,648,Tendon rupture,,300000.0,SP2
+Iuri Tabatadze,Right Winger,Cádiz CF,2687,unknown injury,,1200000.0,SP2
+Giorgi Gocholeishvili,Right-Back,Cádiz CF,2687,Torn lateral ankle ligament,,2000000.0,SP2
+Stefan Bajcetic,Defensive Midfield,RC Celta Fortuna,8733,surgery,,4000000.0,SP2
+Ekain Orobengoa,Centre-Forward,Real Sociedad B,9899,Knee injury,,200000.0,SP2
+Adilson,Left Winger,Córdoba CF,993,Cruciate ligament tear,28/10/2026,300000.0,SP2
+Guille Bueno,Left-Back,Real Valladolid CF,366,Cruciate ligament tear,31/10/2026,1200000.0,SP2
+Théo Le Normand,Central Midfield,FC Andorra,10718,Cruciate ligament tear,10/12/2026,400000.0,SP2
+Anthony Khayat,Centre-Back,RC Celta Fortuna,8733,Cruciate ligament tear,17/12/2026,50000.0,SP2
+Kenneth Mamah,Right Winger,AD Ceuta FC,8568,Groin injury,01/01/2027,700000.0,SP2
+Fabrizio Brignani,Centre-Back,CD Castellón,2502,Cruciate ligament injury,22/02/2027,1200000.0,SP2
+Samuel Obeng,Centre-Forward,Albacete Balompié,1532,Cruciate ligament tear,16/04/2027,500000.0,SP2
+Jacobo Martí,Right-Back,Córdoba CF,993,Meniscus injury,03/05/2027,100000.0,SP2
+Lorenz Assignon,Right-Back,VfB Stuttgart,79,Fitness,,9000000.0,D1
+Marvin Friedrich,Centre-Back,1.FC Union Berlin,89,Knock,,1800000.0,D1
+Keke Topp,Centre-Forward,SV Werder Bremen,86,Cruciate ligament tear,,3000000.0,D1
+Moussa Ndiaye,Left-Back,SV Werder Bremen,86,Groin problems,,4000000.0,D1
+Justin Njinmah,Right Winger,SV Werder Bremen,86,Hamstring injury,,5000000.0,D1
+Felix Agu,Left-Back,SV Werder Bremen,86,muscular problems,,4500000.0,D1
+Senne Lynen,Defensive Midfield,SV Werder Bremen,86,Pelvic contusion,,8000000.0,D1
+Jens Stage,Central Midfield,SV Werder Bremen,86,Tendon rupture,,14000000.0,D1
+Jarzinho Malanga,Attacking Midfield,VfB Stuttgart,79,Abdominal muscle strain,,1700000.0,D1
+Oliver Burke,Centre-Forward,1.FC Union Berlin,89,Achilles tendon problems,,3000000.0,D1
+Tiago Tomás,Right Winger,VfB Stuttgart,79,Muscle injury,,15000000.0,D1
+Luca Jaquez,Centre-Back,VfB Stuttgart,79,Fitness,,10000000.0,D1
+Nikolas Nartey,Central Midfield,VfB Stuttgart,79,Muscle injury,,10000000.0,D1
+Dan-Axel Zagadou,Centre-Back,VfB Stuttgart,79,Hamstring injury,,2000000.0,D1
+Luis Seifert,Centre-Back,SV 07 Elversberg,64,Syndesmosis ligament tear,,200000.0,D1
+Tom Zimmerschied,Left Winger,SV 07 Elversberg,64,Back problems,,1500000.0,D1
+Luca Waldschmidt,Centre-Forward,1.FC Köln,3,muscular problems,,2000000.0,D1
+Patrick Osterhage,Defensive Midfield,SC Freiburg,60,muscular problems,,12000000.0,D1
+Stanley Nsoki,Centre-Back,1.FC Union Berlin,89,Muscle injury,,2000000.0,D1
+Kastriot Imeri,Left Midfield,1.FC Union Berlin,89,unknown injury,,2000000.0,D1
+Andrej Ilic,Centre-Forward,1.FC Union Berlin,89,Food poisoning,,9000000.0,D1
+Andrik Markgraf,Left-Back,1.FC Union Berlin,89,Cruciate ligament tear,,300000.0,D1
+Sven Michel,Right Winger,SC Paderborn 07,127,Groin injury,,300000.0,D1
+Timur Gayret,Central Midfield,SC Paderborn 07,127,Cruciate ligament tear,,450000.0,D1
+Nyamekye Awortwie-Grant,Centre-Back,SC Paderborn 07,127,Outer ligament problems,,400000.0,D1
+Lasse Eickel,Centre-Forward,SC Paderborn 07,127,Back problems,,150000.0,D1
+Steve Mounié,Centre-Forward,FC Augsburg,167,unknown injury,,1500000.0,D1
+Tim Breithaupt,Defensive Midfield,FC Augsburg,167,Toe injury,,800000.0,D1
+Anton Kade,Attacking Midfield,FC Augsburg,167,Muscle injury,,10000000.0,D1
+Sima Suso,Central Midfield,FC Augsburg,167,Torn muscle fiber,,2800000.0,D1
+Alexander Prass,Left Midfield,TSG 1899 Hoffenheim,533,Adductor pain,,9000000.0,D1
+Fisnik Asllani,Centre-Forward,TSG 1899 Hoffenheim,533,Knee problems,,35000000.0,D1
+Rocco Reitz,Central Midfield,RB Leipzig,23826,Hamstring injury,,20000000.0,D1
+Konstantinos Karetsas,Attacking Midfield,Borussia Dortmund,16,Circulation problems,,35000000.0,D1
+Jens Castrop,Central Midfield,Borussia Mönchengladbach,18,Shoulder injury,,10000000.0,D1
+Yukhym Konoplya,Right-Back,Borussia Mönchengladbach,18,Inner knee ligament tear,,5000000.0,D1
+Daiki Hashioka,Right-Back,Borussia Mönchengladbach,18,Neck injury,,1500000.0,D1
+Enzo Leopold,Central Midfield,Borussia Mönchengladbach,18,Cruciate ligament tear,,4000000.0,D1
+Nicolas Kühn,Right Winger,Borussia Mönchengladbach,18,Torn muscle bundle,,10000000.0,D1
+Enzo dos Santos,Central Midfield,Borussia Dortmund,16,Patellar tendon problems,,250000.0,D1
+Justin Lerma,Attacking Midfield,Borussia Dortmund,16,Muscle injury,,3200000.0,D1
+Mussa Kaba,Defensive Midfield,Borussia Dortmund,16,muscular problems,,200000.0,D1
+Ansgar Knauff,Right Winger,Eintracht Frankfurt,24,Hamstring injury,,15000000.0,D1
+Filippo Mane,Centre-Back,Borussia Dortmund,16,Muscle injury,,2500000.0,D1
+Giannis Konstantelias,Attacking Midfield,Borussia Dortmund,16,Cruciate ligament tear,,22000000.0,D1
+Emre Can,Centre-Back,Borussia Dortmund,16,Cruciate ligament tear,,3000000.0,D1
+Kennet Eichhorn,Defensive Midfield,Bayer 04 Leverkusen,15,Ill,,20000000.0,D1
+Montrell Culbreath,Right Winger,Bayer 04 Leverkusen,15,Foot injury,,15000000.0,D1
+Guéla Doué,Right-Back,Bayer 04 Leverkusen,15,Fitness,,20000000.0,D1
+Nathan Tella,Right Winger,Bayer 04 Leverkusen,15,Back problems,,15000000.0,D1
+Timo Hübers,Centre-Back,1.FC Köln,3,Knee injury,,1500000.0,D1
+Jessic Ngankam,Centre-Forward,Eintracht Frankfurt,24,Hamstring injury,,700000.0,D1
+Fernando Dickes,Goalkeeper,Hamburger SV,41,Shoulder injury,,300000.0,D1
+Kofi Amoako,Defensive Midfield,Hamburger SV,41,Ill,,4000000.0,D1
+Sebastiaan Bornauw,Centre-Back,Hamburger SV,41,muscular problems,,8000000.0,D1
+Miro Muheim,Left-Back,Hamburger SV,41,Fitness,,5000000.0,D1
+Silas,Right Winger,1.FSV Mainz 05,39,Tibia and fibula fracture,,2000000.0,D1
+Eric Martel,Defensive Midfield,1.FSV Mainz 05,39,Inner ligament injury,,8000000.0,D1
+Paul Nebel,Attacking Midfield,1.FSV Mainz 05,39,Adductor injury,,18000000.0,D1
+Silvan Widmer,Right-Back,1.FSV Mainz 05,39,Patellar tendon problems,,800000.0,D1
+Dominik Kohr,Centre-Back,1.FSV Mainz 05,39,Ankle injury,,2000000.0,D1
+Emil Højlund,Centre-Forward,FC Schalke 04,33,Achilles tendon surgery,,500000.0,D1
+Farès Chaïbi,Attacking Midfield,Eintracht Frankfurt,24,infection,,15000000.0,D1
+Oscar Højlund,Central Midfield,Eintracht Frankfurt,24,Hip problems,,15000000.0,D1
+Alexander Røssing-Lelesiit,Left Winger,Hamburger SV,41,Ankle injury,,5000000.0,D1
+Serge Gnabry,Second Striker,Bayern Munich,27,Fitness,14/09/2026,18000000.0,D1
+Justin Diehl,Left Winger,VfB Stuttgart,79,Hamstring injury,30/09/2026,1200000.0,D1
+Dennis Seimen,Goalkeeper,VfB Stuttgart,79,Hamstring injury,30/09/2026,10000000.0,D1
+Florent Muslija,Left Winger,SC Freiburg,60,Cruciate ligament tear,11/10/2026,1800000.0,D1
+Christoph Baumgartner,Attacking Midfield,RB Leipzig,23826,Hamstring injury,31/10/2026,40000000.0,D1
+Lukas Boeder,Centre-Back,SG Dynamo Dresden,129,muscular problems,,400000.0,D2
+Enis Cokaj,Defensive Midfield,VfL Bochum,80,Muscle injury,,1000000.0,D2
+Babis Drakas,Right Winger,VfL Bochum,80,Knee injury,,175000.0,D2
+Christian Eriksen,Attacking Midfield,VfL Wolfsburg,82,heart problems,,2500000.0,D2
+Timon Wellenreuther,Goalkeeper,VfL Wolfsburg,82,Knee injury,,5000000.0,D2
+Fraser Hornby,Centre-Forward,VfL Wolfsburg,82,Achilles heel problems,,4500000.0,D2
+Rogério,Left-Back,VfL Wolfsburg,82,Muscle injury,,1000000.0,D2
+Aster Vranckx,Central Midfield,VfL Wolfsburg,82,unknown injury,,5000000.0,D2
+Saël Kumbedi,Right-Back,VfL Wolfsburg,82,muscular problems,,12000000.0,D2
+Trevor Benedict,Left Winger,VfL Wolfsburg,82,unknown injury,,,D2
+Luca Marseiler,Left Winger,SV Darmstadt 98,105,Cruciate ligament tear,,1000000.0,D2
+Fabian Nürnberger,Left-Back,SV Darmstadt 98,105,Hamstring injury,,1500000.0,D2
+Merveille Papela,Central Midfield,SV Darmstadt 98,105,Meniscus injury,,600000.0,D2
+Oliver Olsen,Right-Back,VfL Bochum,80,muscular problems,,1500000.0,D2
+Luca Herrmann,Central Midfield,SG Dynamo Dresden,129,unknown injury,,400000.0,D2
+Lars Bünning,Centre-Back,SG Dynamo Dresden,129,Cerebral hemorrhage,,350000.0,D2
+Lubambo Musonda,Left-Back,1.FC Magdeburg,187,Achilles tendon rupture,,600000.0,D2
+Giorgi Kvilitaia,Centre-Forward,Holstein Kiel,269,Muscle injury,,900000.0,D2
+Sebastian Schonlau,Centre-Back,Holstein Kiel,269,Torn muscle fiber,,500000.0,D2
+Lasse Rosenboom,Right-Back,Holstein Kiel,269,Syndesmotic ligament tear,,1200000.0,D2
+Andu Kelati,Left Winger,Holstein Kiel,269,strain,,700000.0,D2
+Frederik Roslyng,Centre-Back,Holstein Kiel,269,Meniscus injury,,1000000.0,D2
+Budu Zivzivadze,Centre-Forward,1.FC Heidenheim 1846,2036,Ill,,1200000.0,D2
+Sirlord Conteh,Right Winger,1.FC Heidenheim 1846,2036,Fitness,,1200000.0,D2
+Maximilian Breunig,Centre-Forward,1.FC Heidenheim 1846,2036,Torn muscle fiber,,600000.0,D2
+Julian Guttau,Attacking Midfield,FC Energie Cottbus,25,Partial tear of the plantar fascia,,350000.0,D2
+Naatan Skyttä,Attacking Midfield,1.FC Kaiserslautern,2,Knee problems,,5000000.0,D2
+Milos Lukovic,Centre-Forward,1.FC Kaiserslautern,2,Fitness,,3500000.0,D2
+Giannis Masouras,Right-Back,1.FC Nuremberg,4,infection,,550000.0,D2
+Styopa Mkrtchyan,Centre-Back,1.FC Nuremberg,4,muscular problems,,600000.0,D2
+Mikayil Faye,Centre-Back,1.FC Nuremberg,4,Fitness,,4500000.0,D2
+Winners Osawe,Defensive Midfield,1.FC Nuremberg,4,Fitness,,450000.0,D2
+Robin Heußer,Central Midfield,Eintracht Braunschweig,23,Inner ligament injury,,700000.0,D2
+Frederik Jäkel,Centre-Back,Eintracht Braunschweig,23,Cruciate ligament injury,,400000.0,D2
+Erik Engelhardt,Centre-Forward,FC Energie Cottbus,25,Cruciate ligament tear,,650000.0,D2
+Ivan Prtajin,Centre-Forward,1.FC Kaiserslautern,2,Fitness,,1000000.0,D2
+Branimir Hrgota,Attacking Midfield,FC St. Pauli,35,Heel problems,,500000.0,D2
+Gísli Thórdarson,Defensive Midfield,FC St. Pauli,35,Hamstring injury,,700000.0,D2
+Mustapha Bundu,Right Winger,Hannover 96,42,Hamstring injury,,1000000.0,D2
+Moritz Broschinski,Centre-Forward,Karlsruher SC,48,Ankle problems,,600000.0,D2
+Kevin Wiethaup,Central Midfield,Karlsruher SC,48,Torn muscle fiber,,400000.0,D2
+Shinta Appelkamp,Attacking Midfield,SpVgg Greuther Fürth,65,muscular problems,,1500000.0,D2
+Benjamin Zank,Centre-Forward,SpVgg Greuther Fürth,65,Tear of the lateral meniscus,,250000.0,D2
+Maxim Dal,Centre-Back,SpVgg Greuther Fürth,65,Shoulder injury,,150000.0,D2
+Jean Manuel Mbom,Right-Back,VfL Bochum,80,Ankle injury,,1200000.0,D2
+Philipp Strompf,Centre-Back,VfL Bochum,80,Pubic bone irritation,,1000000.0,D2
+Daniel Richter,Left Winger,Arminia Bielefeld,10,Fitness,14/09/2026,500000.0,D2
+Sebastian Jung,Right-Back,Karlsruher SC,48,Torn muscle fiber,20/09/2026,300000.0,D2
+Owen Gibs,Attacking Midfield,1.FC Kaiserslautern,2,Inflammation of pubic bone,30/09/2026,200000.0,D2
+Kenneth Schmidt,Centre-Back,SG Dynamo Dresden,129,Cruciate ligament tear,30/11/2026,800000.0,D2
+Mathias Pereira Lage,Left Winger,FC St. Pauli,35,Cruciate ligament tear,31/12/2026,2500000.0,D2
+Patrick Ciurria,Right Midfield,AC Monza,2919,unknown injury,,1000000.0,I1
+Matías Moreno,Centre-Back,Venezia FC,607,Muscle injury,,6000000.0,I1
+Omri Gandelman,Attacking Midfield,US Lecce,1005,unknown injury,,3000000.0,I1
+Ukko Happonen,Goalkeeper,Bologna FC 1909,1025,Adductor pain,,50000.0,I1
+Ché Adams,Centre-Forward,Torino FC,416,Adductor pain,,5000000.0,I1
+Giovanni Simeone,Centre-Forward,Torino FC,416,Back problems,,7000000.0,I1
+M'Bala Nzola,Centre-Forward,Cagliari Calcio,1390,Fitness,,4000000.0,I1
+Zé Pedro,Centre-Back,Cagliari Calcio,1390,Hand injury,,3000000.0,I1
+Mattia Felici,Left Winger,Cagliari Calcio,1390,Cruciate ligament tear,,2500000.0,I1
+Yael Trepy,Centre-Forward,Cagliari Calcio,1390,unknown injury,,2000000.0,I1
+Cyril Ngonge,Right Winger,AC Monza,2919,Fitness,,7000000.0,I1
+Filipe Bordon,Centre-Back,SS Lazio,398,Metatarsal fracture,,750000.0,I1
+Alessio Furlanetto,Goalkeeper,SS Lazio,398,Cruciate ligament surgery,,350000.0,I1
+Jan Ziolkowski,Centre-Back,AC Monza,2919,Foot injury,,12000000.0,I1
+Danilho Doekhi,Centre-Back,SS Lazio,398,Metacarpal fracture,,13000000.0,I1
+Juan Cabal,Left-Back,Juventus FC,506,Thigh problems,,7000000.0,I1
+Patric,Centre-Back,SS Lazio,398,Muscle strain,,1500000.0,I1
+Cristian Volpato,Right Winger,US Sassuolo,6574,Muscle injury,,10000000.0,I1
+Gianluca Busio,Defensive Midfield,Venezia FC,607,Muscle strain,,8000000.0,I1
+Frank Anguissa,Central Midfield,SSC Napoli,6195,Adductor pain,15/09/2026,15000000.0,I1
+Fali Candé,Centre-Back,US Sassuolo,6574,Cruciate ligament tear,15/09/2026,3000000.0,I1
+Cesare Casadei,Central Midfield,Torino FC,416,Muscle fatigue,15/09/2026,15000000.0,I1
+Weston McKennie,Central Midfield,Juventus FC,506,Muscle fatigue,15/09/2026,30000000.0,I1
+Lorenzo Pellegrini,Attacking Midfield,AS Roma,12,Hamstring injury,15/09/2026,8000000.0,I1
+Djed Spence,Right-Back,Inter Milan,46,Fitness,16/09/2026,40000000.0,I1
+Andrea Cambiaso,Left-Back,Juventus FC,506,Ankle sprain,16/09/2026,20000000.0,I1
+Adam Marusic,Right-Back,SS Lazio,398,Hamstring injury,17/09/2026,2500000.0,I1
+Artem Dovbyk,Centre-Forward,Bologna FC 1909,1025,muscular problems,18/09/2026,15000000.0,I1
+Nadir Zortea,Right-Back,Bologna FC 1909,1025,Hip bruise,18/09/2026,7000000.0,I1
+Matteo Dagasso,Central Midfield,Venezia FC,607,unknown injury,18/09/2026,3500000.0,I1
+Florian Grillitsch,Defensive Midfield,Frosinone Calcio,8970,Adductor pain,18/09/2026,2500000.0,I1
+Toma Bašić,Central Midfield,Venezia FC,607,Inflammation of the sole of the foot,18/09/2026,3000000.0,I1
+Fisayo Dele-Bashiru,Central Midfield,SS Lazio,398,Hamstring injury,18/09/2026,6000000.0,I1
+Nicolò Rovella,Defensive Midfield,SS Lazio,398,Calf injury,18/09/2026,23000000.0,I1
+Oussama El Azzouzi,Defensive Midfield,Bologna FC 1909,1025,Hamstring muscle injury,22/09/2026,1800000.0,I1
+Riccardo Orsolini,Right Winger,Bologna FC 1909,1025,Hamstring injury,23/09/2026,15000000.0,I1
+Matteo Palma,Centre-Back,Udinese Calcio,410,Muscle injury,28/09/2026,6500000.0,I1
+Oumar Solet,Centre-Back,Udinese Calcio,410,Muscle injury,30/09/2026,23000000.0,I1
+Daniel Boloca,Defensive Midfield,US Sassuolo,6574,Arthroscopy,30/09/2026,4000000.0,I1
+Isak Hien,Centre-Back,Atalanta BC,800,Thigh problems,30/09/2026,22000000.0,I1
+Scott McTominay,Central Midfield,SSC Napoli,6195,heart problems,01/10/2026,40000000.0,I1
+Nicolò Zaniolo,Second Striker,Udinese Calcio,410,Hamstring strain,01/10/2026,15000000.0,I1
+Alessandro Zanoli,Right-Back,Udinese Calcio,410,Cruciate ligament tear,01/10/2026,4500000.0,I1
+Jayden Addai,Right Winger,Como 1907,1047,Achilles tendon rupture,01/10/2026,20000000.0,I1
+Pietro Pellegri,Centre-Forward,Torino FC,416,Cruciate ligament tear,01/10/2026,500000.0,I1
+Medon Berisha,Central Midfield,US Lecce,1005,Stress reaction of the bone,01/10/2026,5000000.0,I1
+Willem Geubbels,Centre-Forward,US Lecce,1005,Ankle sprain,01/10/2026,5000000.0,I1
+Kamaldeen Sulemana,Left Winger,Atalanta BC,800,Inner ligament injury,01/10/2026,17000000.0,I1
+Edoardo Pieragnolo,Left-Back,US Sassuolo,6574,Cruciate ligament injury,01/10/2026,2000000.0,I1
+Andrea Adorante,Centre-Forward,Venezia FC,607,Back injury,01/10/2026,4500000.0,I1
+Juan Arizala,Left Midfield,Udinese Calcio,410,Hamstring muscle injury,06/10/2026,3500000.0,I1
+Armel Bella-Kotchap,Centre-Back,Venezia FC,607,Adductor injury,06/10/2026,7000000.0,I1
+Jérémie Boga,Left Winger,Juventus FC,506,Hamstring muscle injury,07/10/2026,8000000.0,I1
+Giovane,Centre-Forward,SSC Napoli,6195,Inguinal hernia,08/10/2026,12000000.0,I1
+Alex Meret,Goalkeeper,SSC Napoli,6195,Adductor injury,08/10/2026,8000000.0,I1
+Elias Havel,Centre-Forward,Genoa CFC,252,Adductor pain,10/10/2026,2200000.0,I1
+Luca Marianucci,Centre-Back,SSC Napoli,6195,Inner ligament injury,12/10/2026,7000000.0,I1
+Alisson Santos,Left Winger,SSC Napoli,6195,Hamstring muscle injury,15/10/2026,28000000.0,I1
+Fabiano Parisi,Left-Back,ACF Fiorentina,430,Cruciate ligament injury,19/10/2026,6000000.0,I1
+Jakub Piotrowski,Central Midfield,Udinese Calcio,410,unknown injury,30/10/2026,4500000.0,I1
+Riyad Idrissi,Left-Back,Cagliari Calcio,1390,Cruciate ligament tear,30/10/2026,4000000.0,I1
+Lorenzo Venturino,Right Winger,Genoa CFC,252,Knee surgery,30/10/2026,5000000.0,I1
+Alessandro Buongiorno,Centre-Back,SSC Napoli,6195,Knee surgery,31/10/2026,30000000.0,I1
+Marin Šverko,Centre-Back,Venezia FC,607,unknown injury,31/10/2026,1500000.0,I1
+Matteo Pessina,Central Midfield,AC Monza,2919,Knee injury,01/11/2026,5000000.0,I1
+Hans Nicolussi Caviglia,Defensive Midfield,Parma Calcio 1913,130,Pubalgia,02/11/2026,6000000.0,I1
+Jeff Ekhator,Centre-Forward,Juventus FC,506,Hamstring strain,02/11/2026,18000000.0,I1
+Kenan Yıldız,Left Winger,Juventus FC,506,Broken foot,25/11/2026,75000000.0,I1
+Franco Israel,Goalkeeper,Torino FC,416,Shoulder injury,04/12/2026,2500000.0,I1
+Bartol Franjic,Centre-Back,Venezia FC,607,Shoulder injury,07/12/2026,1000000.0,I1
+Khéphren Thuram,Central Midfield,Juventus FC,506,Knee surgery,01/01/2027,38000000.0,I1
+Ismaël Koné,Central Midfield,US Sassuolo,6574,Tibia and fibula fracture,03/01/2027,25000000.0,I1
+Manuel Locatelli,Defensive Midfield,Juventus FC,506,Meniscus injury,07/01/2027,25000000.0,I1
+Karim Diop,Centre-Back,UC Sampdoria,1038,unknown injury,,400000.0,I2
+Daniel Fila,Centre-Forward,US Avellino 1912,2331,Hamstring injury,,1600000.0,I2
+Nicolò Radaelli,Right-Back,Mantova 1911,2581,unknown injury,,1000000.0,I2
+Papu Gómez,Left Winger,Calcio Padova,3037,Ankle surgery,,500000.0,I2
+Rosen Bozhinov,Centre-Back,Pisa Sporting Club,4172,unknown injury,,4000000.0,I2
+Mateus Lusuardi,Centre-Back,Pisa Sporting Club,4172,Cruciate ligament injury,,700000.0,I2
+Maurizio Rossetti,Centre-Forward,Cesena FC,1429,Cruciate ligament tear,,200000.0,I2
+Jonathan Klinsmann,Goalkeeper,Cesena FC,1429,Cervical vertebra fracture,,2500000.0,I2
+Alessandro Sersanti,Central Midfield,Modena FC,1385,Cruciate ligament tear,,1800000.0,I2
+Abdullah Laidani,Goalkeeper,Modena FC,1385,Knee surgery,,300000.0,I2
+Francesco Conti,Central Midfield,UC Sampdoria,1038,Knee surgery,,2000000.0,I2
+Bjorn Meijer,Left-Back,UC Sampdoria,1038,muscular problems,,3000000.0,I2
+Nikola Sekulov,Attacking Midfield,UC Sampdoria,1038,Cruciate ligament injury,,400000.0,I2
+Mattia Viti,Centre-Back,UC Sampdoria,1038,Cruciate ligament injury,,4000000.0,I2
+Salvatore Esposito,Defensive Midfield,UC Sampdoria,1038,Thigh problems,,3000000.0,I2
+Fabio Depaoli,Right-Back,UC Sampdoria,1038,Ankle problems,,750000.0,I2
+Jesse Joronen,Goalkeeper,Palermo FC,458,Shoulder injury,,500000.0,I2
+Hamza El Kaouakibi,Right-Back,FC Südtirol,4554,unknown injury,,650000.0,I2
+Martin Frese,Left-Back,Hellas Verona,276,Arthroscopy,,2500000.0,I2
+Andrea Fulignati,Goalkeeper,US Cremonese,2239,Calf muscle tear,20/09/2026,750000.0,I2
+Andrea Favilli,Centre-Forward,US Avellino 1912,2331,muscular problems,20/09/2026,200000.0,I2
+Giuseppe Pezzella,Left-Back,US Cremonese,2239,Calf muscle tear,20/09/2026,2000000.0,I2
+Lorenco Simic,Centre-Back,US Avellino 1912,2331,Calf muscle tear,01/10/2026,700000.0,I2
+Pier Luigi Simonetti,Left Midfield,Benevento Calcio,4171,Cruciate ligament injury,01/10/2026,300000.0,I2
+Suat Serdar,Central Midfield,Hellas Verona,276,Cruciate ligament surgery,10/10/2026,2800000.0,I2
+Raffaele Romano,Centre-Back,Benevento Calcio,4171,Ankle sprain,16/10/2026,275000.0,I2
+Frank Tsadjout,Centre-Forward,LR Vicenza,2655,surgery,07/11/2026,300000.0,I2
+Luca Zanimacchia,Right Winger,Calcio Padova,3037,Foot surgery,16/11/2026,1400000.0,I2
+Davide Bariti,Right Midfield,Virtus Entella,20519,Cruciate ligament injury,28/02/2027,175000.0,I2
+Manuel Alagna,Right-Back,Ascoli Calcio,408,Cruciate ligament surgery,02/07/2027,400000.0,I2
+Maik Nawrocki,Centre-Back,RC Lens,826,Cruciate ligament tear,,1500000.0,F1
+Emmanuel Mbemba,Left-Back,Paris FC,10004,Dead leg,,,F1
+Nhoa Sangui,Left-Back,Paris FC,10004,Muscle injury,,10000000.0,F1
+Otávio,Centre-Back,Paris FC,10004,Dead leg,,10000000.0,F1
+Brendan Chardonnet,Centre-Back,Stade Brestois 29,3911,Calf injury,,4000000.0,F1
+Haris Belkebla,Central Midfield,Angers SCO,1420,Dead leg,,1800000.0,F1
+Yvann Titi,Right-Back,ESTAC Troyes,1095,Dead leg,,2500000.0,F1
+Ismaël Boura,Left-Back,ESTAC Troyes,1095,Hip injury,,4000000.0,F1
+Hamza Igamane,Centre-Forward,LOSC Lille,1082,Cruciate ligament tear,,18000000.0,F1
+Jhoanner Chávez,Left-Back,RC Lens,826,Thigh problems,,2200000.0,F1
+Saud Abdulhamid,Right-Back,RC Lens,826,Knock,,9000000.0,F1
+Takumi Minamino,Left Winger,AS Monaco,162,Cruciate ligament tear,,10000000.0,F1
+Stephan Zagadou,Centre-Back,Le Havre AC,738,Cruciate ligament tear,,4000000.0,F1
+Felix Mambimbi,Left Winger,Le Havre AC,738,Achilles tendon rupture,,500000.0,F1
+Lionel Mpasi-Nzau,Goalkeeper,Le Havre AC,738,Achilles tendon rupture,,700000.0,F1
+Antoine Mendy,Centre-Back,OGC Nice,417,Cruciate ligament tear,,10000000.0,F1
+Laurent Abergel,Defensive Midfield,OGC Nice,417,Cruciate ligament tear,,1800000.0,F1
+Sékou Fofana,Left-Back,AJ Auxerre,290,Pubalgia,,800000.0,F1
+Bryan Okoh,Centre-Back,AJ Auxerre,290,Cruciate ligament tear,,4000000.0,F1
+Assane Dioussé,Defensive Midfield,AJ Auxerre,290,Cruciate ligament tear,,500000.0,F1
+Tochukwu Nnadi,Defensive Midfield,Olympique Marseille,244,Knee injury,,4500000.0,F1
+Ansu Fati,Left Winger,AS Monaco,162,Calf injury,,15000000.0,F1
+Nicolas Kocik,Goalkeeper,Le Mans FC,1164,Ankle sprain,15/09/2026,1500000.0,F1
+Yacine Titraoui,Central Midfield,RC Lens,826,Hamstring injury,21/09/2026,7000000.0,F1
+Anis Soubeir,Central Midfield,AS Monaco,162,Ankle injury,01/10/2026,800000.0,F1
+Samson Baidoo,Centre-Back,RC Lens,826,Dead leg,25/10/2026,25000000.0,F1
+Joaquín Panichelli,Centre-Forward,RC Strasbourg Alsace,667,Cruciate ligament tear,31/12/2026,35000000.0,F1
+Jérémy Gélin,Defensive Midfield,AS Nancy-Lorraine,1159,Knee injury,,800000.0,F2
+François Lajugie,Centre-Back,FC Annecy,30204,Cruciate ligament tear,,400000.0,F2
+Hermann Tebily,Centre-Forward,Rodez AF,11273,Cruciate ligament tear,,100000.0,F2
+Quentin Braat,Goalkeeper,Rodez AF,11273,Calf injury,,1200000.0,F2
+Alex Daho,Left Winger,USL Dunkerque,9202,Hamstring injury,,250000.0,F2
+Zoran Moco,Right-Back,US Boulogne,7042,Eye injury,,400000.0,F2
+Abdellah Baallal,Central Midfield,Clermont Foot 63,3524,Knock,,1800000.0,F2
+César Obongo,Right-Back,Dijon FCO,2969,Ankle surgery,,150000.0,F2
+Hafiz Umar Ibrahim,Centre-Forward,Stade Reims,1421,Cruciate ligament injury,,3000000.0,F2
+Lenny Sylla,Attacking Midfield,Stade Reims,1421,Knee injury,,,F2
+Mory Gbane,Defensive Midfield,Stade Reims,1421,Knee injury,,4000000.0,F2
+Joseph Okumu,Centre-Back,Stade Reims,1421,Torn knee ligaments,,3000000.0,F2
+Issam Bouaoune,Central Midfield,AS Nancy-Lorraine,1159,Ankle sprain,,300000.0,F2
+Joseph Mangondo,Centre-Forward,FC Metz,347,Knee problems,,50000.0,F2
+Pierre Lemonnier,Centre-Back,Red Star FC,1154,Cruciate ligament tear,,300000.0,F2
+Hermann Esmel,Defensive Midfield,Stade Lavallois,1080,Knee injury,,250000.0,F2
+Francis Coquelin,Defensive Midfield,Stade Lavallois,1080,Facial fracture,,700000.0,F2
+Alexis Mirbach,Goalkeeper,FC Nantes,995,Meniscus injury,,50000.0,F2
+Killian Corredor,Centre-Forward,FC Nantes,995,Hamstring injury,,2800000.0,F2
+Axel Guéguin,Right Winger,Montpellier HSC,969,Cruciate ligament tear,,250000.0,F2
+Amine Hemia,Attacking Midfield,EA Guingamp,855,Metacarpal fracture,,1800000.0,F2
+Gautier Ott,Left Winger,EA Guingamp,855,Cruciate ligament tear,,500000.0,F2
+Darly N'Landu,Central Midfield,EA Guingamp,855,Cruciate ligament tear,,250000.0,F2
+Paul Eymard,Central Midfield,AS Saint-Étienne,618,Broken foot,,500000.0,F2
+Mattéo Commaret,Centre-Back,Stade Lavallois,1080,Shoulder injury,01/10/2026,500000.0,F2
+Ulisses,Centre-Back,CD Nacional,982,unknown injury,,1000000.0,P1
+Miguel Ángel Brau,Left-Back,Académico Viseu FC,7788,unknown injury,,1000000.0,P1
+Jeremy Arévalo,Centre-Forward,CF Estrela Amadora,2431,Back problems,,7000000.0,P1
+Brandon Aguilera,Central Midfield,Rio Ave FC,2425,Cruciate ligament tear,,1500000.0,P1
+Cezary Miszta,Goalkeeper,Rio Ave FC,2425,Back problems,,5000000.0,P1
+Mohamed Bamba,Defensive Midfield,Gil Vicente FC,2424,unknown injury,,1500000.0,P1
+MT,Centre-Back,CD Santa Clara,2423,Cruciate ligament tear,,3500000.0,P1
+Bright Arrey-Mbi,Centre-Back,SC Braga,1075,unknown injury,,9000000.0,P1
+Sikou Niakaté,Centre-Back,SC Braga,1075,Achilles tendon rupture,,6000000.0,P1
+Ivanildo Fernandes,Centre-Back,CD Nacional,982,unknown injury,,200000.0,P1
+Gabriel Mec,Right Winger,FC Porto,720,Pubic bone bruise,,16000000.0,P1
+Oskar Pietuszewski,Left Winger,FC Porto,720,Muscle injury,,25000000.0,P1
+Vasco Sousa,Central Midfield,FC Porto,720,Broken fibula,,2000000.0,P1
+Zaidu Sanusi,Left-Back,FC Porto,720,Adductor injury,,3000000.0,P1
+Victor Froholdt,Central Midfield,FC Porto,720,concussion,18/09/2026,50000000.0,P1
+João Simões,Central Midfield,Sporting CP,336,Foot injury,30/09/2026,15000000.0,P1
+Salvador Blopa,Right-Back,Sporting CP,336,Muscle injury,30/09/2026,2500000.0,P1
+Samu Aghehowa,Centre-Forward,FC Porto,720,Cruciate ligament tear,31/10/2026,45000000.0,P1
+Emre Mor,Right Winger,NEC Nijmegen,467,Groin injury,,500000.0,N1
+Adamo Nagalo,Centre-Back,PSV Eindhoven,383,unknown injury,,2800000.0,N1
+Mikkel Bro Hansen,Centre-Forward,PSV Eindhoven,383,unknown injury,,800000.0,N1
+Kristoffer Peterson,Left Winger,Fortuna Sittard,385,unknown injury,,450000.0,N1
+Iván Márquez,Centre-Back,Fortuna Sittard,385,unknown injury,,450000.0,N1
+Yassin Oukili,Central Midfield,Fortuna Sittard,385,Groin injury,,700000.0,N1
+Sven Simons,Central Midfield,Fortuna Sittard,385,Hamstring injury,,450000.0,N1
+Thomas Didillon-Hödl,Goalkeeper,Willem II Tilburg,403,Hamstring injury,,700000.0,N1
+Jari Schuurman,Attacking Midfield,Willem II Tilburg,403,Back injury,,450000.0,N1
+Vito van Crooij,Attacking Midfield,Willem II Tilburg,403,Ankle injury,,900000.0,N1
+Justin Hoogma,Centre-Back,Willem II Tilburg,403,Knee injury,,450000.0,N1
+Amine Lachkar,Defensive Midfield,Willem II Tilburg,403,Groin injury,,500000.0,N1
+Anass Zarrouk,Defensive Midfield,Willem II Tilburg,403,surgery,,250000.0,N1
+Armin Culum,Left Winger,Willem II Tilburg,403,Foot injury,,400000.0,N1
+Thijs Muller,Attacking Midfield,Willem II Tilburg,403,Broken toe,,350000.0,N1
+Daan Visser,Defensive Midfield,SC Cambuur Leeuwarden,133,Cruciate ligament surgery,,250000.0,N1
+Gonzalo Crettaz,Goalkeeper,NEC Nijmegen,467,Hamstring injury,,4000000.0,N1
+Deveron Fonville,Centre-Back,NEC Nijmegen,467,Ankle injury,,1500000.0,N1
+Shunsuke Mito,Attacking Midfield,Sparta Rotterdam,468,unknown injury,,2000000.0,N1
+Max de Ligt,Centre-Back,Sparta Rotterdam,468,unknown injury,,75000.0,N1
+Daley Blind,Centre-Back,Ajax Amsterdam,610,unknown injury,,1200000.0,N1
+Denso Kasius,Right-Back,AZ Alkmaar,1090,Groin injury,,6000000.0,N1
+Kees Smit,Attacking Midfield,AZ Alkmaar,1090,Groin injury,,25000000.0,N1
+Mylian Jiménez,Central Midfield,ADO Den Haag,1268,unknown injury,,300000.0,N1
+Cameron Peupion,Left Winger,ADO Den Haag,1268,unknown injury,,450000.0,N1
+Ryan Thomas,Defensive Midfield,PEC Zwolle,1269,unknown injury,,650000.0,N1
+Younes Namli,Right Winger,PEC Zwolle,1269,unknown injury,,1000000.0,N1
+Sherel Floranus,Left-Back,PEC Zwolle,1269,Hamstring injury,,800000.0,N1
+Gerrit Nauber,Centre-Back,Go Ahead Eagles,1435,Broken leg,,300000.0,N1
+Nick Marsman,Goalkeeper,Go Ahead Eagles,1435,unknown injury,,125000.0,N1
+Gijs Smal,Left-Back,Feyenoord Rotterdam,234,Ankle injury,,5500000.0,N1
+Kevin Paredes,Left Midfield,FC Utrecht,200,Knee injury,,2000000.0,N1
+Miliano Jonathans,Right Winger,FC Utrecht,200,Cruciate ligament tear,,750000.0,N1
+Alonzo Engwanda,Defensive Midfield,FC Utrecht,200,Hamstring injury,,8000000.0,N1
+Tyrique Mercera,Right-Back,FC Groningen,202,unknown injury,,600000.0,N1
+Noah Ohio,Centre-Forward,FC Utrecht,200,Knee surgery,,600000.0,N1
+Nikolas Brandis,Left-Back,FC Groningen,202,unknown injury,,375000.0,N1
+Travis Hernes,Central Midfield,FC Groningen,202,unknown injury,,350000.0,N1
+Ryan Metu,Left Winger,FC Groningen,202,unknown injury,,600000.0,N1
+Bart Nieuwkoop,Right-Back,Feyenoord Rotterdam,234,unknown injury,,1500000.0,N1
+Jakub Moder,Central Midfield,Feyenoord Rotterdam,234,Knee surgery,,10000000.0,N1
+Gonçalo Borges,Right Winger,Feyenoord Rotterdam,234,minor knock,,3000000.0,N1
+Kristian Hlynsson,Attacking Midfield,FC Twente Enschede,317,minor knock,,6000000.0,N1
+Sami Ouaissa,Right Winger,PSV Eindhoven,383,Hamstring injury,,8000000.0,N1
+Sam Lammers,Centre-Forward,PSV Eindhoven,383,minor knock,,4000000.0,N1
+Wout Asselman,Defensive Midfield,SC Cambuur Leeuwarden,133,unknown injury,,400000.0,N1
+Alassane Pléa,Centre-Forward,PSV Eindhoven,383,unknown injury,,2500000.0,N1
+Stav Lemkin,Centre-Back,FC Twente Enschede,317,unknown injury,,6000000.0,N1
+Thomas Beelen,Centre-Back,Feyenoord Rotterdam,234,Broken leg,,5000000.0,N1
+Mats Egbring,Right-Back,SC Heerenveen,306,Ankle injury,,300000.0,N1
+Marcus Linday,Central Midfield,SC Heerenveen,306,Knee injury,,5000000.0,N1
+Mees Hilgers,Centre-Back,SC Heerenveen,306,Fitness,,3000000.0,N1
+Reiss Nelson,Left Winger,Feyenoord Rotterdam,234,Fitness,19/09/2026,8000000.0,N1
+Ahmetcan Kaplan,Centre-Back,NEC Nijmegen,467,Knee injury,21/09/2026,7000000.0,N1
+Simon Adingra,Left Winger,Ajax Amsterdam,610,Ankle injury,28/09/2026,22000000.0,N1
+Aaron Bouwman,Centre-Back,Ajax Amsterdam,610,Lung contusion,01/10/2026,3500000.0,N1
+Siebe Wylin,Right-Back,Fortuna Sittard,385,unknown injury,09/10/2026,300000.0,N1
+Victor Jensen,Attacking Midfield,FC Utrecht,200,Knee injury,15/10/2026,2500000.0,N1
+Filip Krastev,Attacking Midfield,PEC Zwolle,1269,Achilles tendon surgery,01/11/2026,3000000.0,N1
+Pim Saathof,Centre-Back,Go Ahead Eagles,1435,Cruciate ligament tear,01/01/2027,75000.0,N1
+Stije Resink,Defensive Midfield,AZ Alkmaar,1090,Cruciate ligament injury,01/01/2027,7000000.0,N1
+Jordan Bos,Left-Back,Feyenoord Rotterdam,234,Knee surgery,01/01/2027,12000000.0,N1
+Kiliann Sildillia,Right-Back,PSV Eindhoven,383,surgery,01/01/2027,7000000.0,N1
+Malcolm Jeng,Centre-Back,FC Groningen,202,Achilles tendon rupture,01/05/2027,2000000.0,N1
+Jerdy Schouten,Defensive Midfield,PSV Eindhoven,383,Cruciate ligament tear,01/05/2027,20000000.0,N1
+Rijk Janse,Goalkeeper,FC Groningen,202,Cruciate ligament tear,01/07/2027,50000.0,N1
+Mouhamed Belkheir,Centre-Forward,RAAL La Louvière,3901,Fitness,,500000.0,B1
+Adrián Palacios,Centre-Back,KRC Genk,1184,Knee injury,,800000.0,B1
+Kenan Haroun,Central Midfield,KRC Genk,1184,Cruciate ligament injury,,400000.0,B1
+Christian Akpan,Left-Back,KRC Genk,1184,Hamstring injury,,200000.0,B1
+Joel Ordóñez,Centre-Back,Club Brugge KV,2282,Metatarsal fracture,,33000000.0,B1
+Henok Teklab,Left Winger,Oud-Heverlee Leuven,2727,Syndesmotic ligament tear,,800000.0,B1
+Marco Ilaimaharitra,Defensive Midfield,Standard Liège,3057,Hamstring injury,,800000.0,B1
+Mohammed El Hankouri,Attacking Midfield,Standard Liège,3057,Muscle injury,,1200000.0,B1
+Dimitri Lavalée,Centre-Back,Standard Liège,3057,Achilles tendon problems,,1500000.0,B1
+Josué Homawoo,Centre-Back,Standard Liège,3057,Achilles tendon rupture,,2000000.0,B1
+Gustav Mortensen,Left-Back,Standard Liège,3057,Calf muscle tear,,3000000.0,B1
+Brent Gabriël,Goalkeeper,Zulte Waregem,3508,unknown injury,,1000000.0,B1
+Wilguens Paugain,Right-Back,Zulte Waregem,3508,unknown injury,,800000.0,B1
+Yaimar Medina,Left-Back,KRC Genk,1184,Hamstring injury,,4000000.0,B1
+Ross Sykes,Centre-Back,Union Saint-Gilloise,3948,Shoulder injury,,4500000.0,B1
+Kevin Rodríguez,Centre-Forward,Union Saint-Gilloise,3948,minor knock,,6000000.0,B1
+Nohim Chibani,Centre-Back,Union Saint-Gilloise,3948,minor knock,,400000.0,B1
+Ralf Seuntjens,Centre-Forward,Lommel SK,5026,Heel injury,,50000.0,B1
+Nicolas Rommens,Central Midfield,Lommel SK,5026,Back injury,,400000.0,B1
+Jesper Tolinsson,Centre-Back,Lommel SK,5026,minor knock,,400000.0,B1
+Henry Oware,Centre-Back,Lommel SK,5026,Hamstring injury,,400000.0,B1
+Sverre Nypan,Central Midfield,Lommel SK,5026,Hamstring injury,,13000000.0,B1
+Jhon Banguera,Centre-Back,Lommel SK,5026,Cruciate ligament tear,,400000.0,B1
+Viktor Boone,Centre-Back,SK Beveren,28643,Adductor injury,,700000.0,B1
+Ilyes Najim,Left Winger,SK Beveren,28643,Knee injury,,300000.0,B1
+Arbnor Muja,Right Winger,Sint-Truidense VV,475,Hamstring injury,,2500000.0,B1
+Ilay Camara,Right-Back,RSC Anderlecht,58,Broken foot,,3500000.0,B1
+Lucas Hey,Centre-Back,RSC Anderlecht,58,fracture,,2500000.0,B1
+Hyllarion Goore,Centre-Forward,KAA Gent,157,unknown injury,,4000000.0,B1
+Antoine Bernier,Right Winger,Royal Charleroi SC,172,Foot injury,,1500000.0,B1
+Tommy St. Jago,Centre-Back,KV Mechelen,354,unknown injury,,2000000.0,B1
+Dikeni Salifou,Central Midfield,KV Mechelen,354,minor knock,,1000000.0,B1
+Gora Diouf,Centre-Back,KV Mechelen,354,unknown injury,,1500000.0,B1
+Killian Sardella,Right-Back,RSC Anderlecht,58,Torn muscle bundle,,2500000.0,B1
+Frédéric Soèllé Soèllé,Centre-Forward,Sint-Truidense VV,475,Hamstring injury,,250000.0,B1
+Tayo Adaramola,Left-Back,Cercle Brugge ,520,Hamstring injury,,800000.0,B1
+Charles Herrmann,Right Winger,Cercle Brugge ,520,Muscle injury,,800000.0,B1
+Joel Ndala,Left Winger,Cercle Brugge ,520,Knee injury,,3000000.0,B1
+Abdoulie Manneh,Left Winger,Cercle Brugge ,520,Fitness,,3000000.0,B1
+Liam De Smet,Central Midfield,KV Kortrijk,601,minor knock,,450000.0,B1
+Matthew Anderson,Left-Back,KV Kortrijk,601,Knee injury,,800000.0,B1
+Doğucan Haspolat,Defensive Midfield,KVC Westerlo,968,Ankle injury,,5000000.0,B1
+Daam Foulon,Left-Back,Royal Antwerp FC,1096,unknown injury,,2000000.0,B1
+Youssef Hamdaoui,Central Midfield,Royal Antwerp FC,1096,unknown injury,,1500000.0,B1
+Carlos Mejia,Right Winger,Royal Antwerp FC,1096,minor knock,,1500000.0,B1
+Ian Struyf,Centre-Back,KV Mechelen,354,Partial muscle tear,16/11/2026,400000.0,B1
+Keano Vanrafelghem,Centre-Forward,KV Mechelen,354,Ankle injury,18/11/2026,1500000.0,B1
+Adeshina Ayodele,Centre-Forward,KV Mechelen,354,Cruciate ligament tear,01/05/2027,300000.0,B1
+Leo Hjelde,Centre-Back,KV Mechelen,354,Patellar tendon tear,01/05/2027,1500000.0,B1
+Ali Osman Kalın,Left Winger,Gaziantep FK,2832,unknown injury,,50000.0,T1
+Gökdeniz Bayrakdar,Centre-Forward,Göztepe,1467,unknown injury,,800000.0,T1
+Marco Asensio,Attacking Midfield,Fenerbahce,36,Hamstring strain,,15000000.0,T1
+Allan Godói,Centre-Back,Göztepe,1467,Torn knee ligaments,,100000.0,T1
+Novatus Miroshi,Defensive Midfield,Göztepe,1467,unknown injury,,5000000.0,T1
+Ibrahim Sabra,Centre-Forward,Göztepe,1467,Torn ankle ligaments,,500000.0,T1
+Nevzat Üzel,Goalkeeper,Göztepe,1467,Broken arm,,,T1
+Nazım Sangaré,Centre-Back,Gaziantep FK,2832,Back problems,,200000.0,T1
+Sontje Hansen,Right Winger,Gaziantep FK,2832,unknown injury,,3500000.0,T1
+Fuat Bavuk,Centre-Forward,Gaziantep FK,2832,Hamstring muscle injury,,200000.0,T1
+Furkan Bayır,Centre-Back,Göztepe,1467,Cruciate ligament surgery,,1000000.0,T1
+Edin Visca,Right Winger,Basaksehir FK,6890,unknown injury,,100000.0,T1
+Muhammed Şengezer,Goalkeeper,Basaksehir FK,6890,Shoulder injury,,3500000.0,T1
+Taşkın İlter,Defensive Midfield,Eyüpspor,7160,unknown injury,,150000.0,T1
+Abdelhamid Sabiri,Attacking Midfield,Eyüpspor,7160,unknown injury,,850000.0,T1
+Haris Hajradinovic,Attacking Midfield,Kasimpasa,10484,Calf problems,,1200000.0,T1
+Mortadha Ben Ouanes,Left Winger,Kasimpasa,10484,unknown injury,,1500000.0,T1
+Thiemoko Diarra,Left Winger,Kasimpasa,10484,unknown injury,,1500000.0,T1
+Maestro,Defensive Midfield,Alanyaspor,11282,Torn thigh muscle,,7000000.0,T1
+Hasan Yıldırım,Left Winger,Amed SK,12382,unknown injury,,,T1
+Cheikh Niasse,Defensive Midfield,Genclerbirligi Ankara,820,unknown injury,,2000000.0,T1
+Okay Yokuşlu,Defensive Midfield,Trabzonspor,449,Cartilage damage,,1200000.0,T1
+Amara Diouf,Left Winger,Fenerbahce,36,Fitness,,800000.0,T1
+Jaurès Assoumou,Left Winger,Samsunspor,152,Torn thigh muscle,,2000000.0,T1
+Afonso Sousa,Attacking Midfield,Samsunspor,152,Hamstring injury,,2500000.0,T1
+Fatih Kaya,Centre-Forward,Samsunspor,152,Adductor injury,,500000.0,T1
+Noah Sonko Sundberg,Centre-Back,Göztepe,1467,Muscle injury,,900000.0,T1
+Bruno Petkovic,Centre-Forward,Kocaelispor,120,Hamstring strain,,1500000.0,T1
+Aleksandar Jovanović,Goalkeeper,Kocaelispor,120,Knee surgery,,500000.0,T1
+Kévin Rodrigues,Left-Back,Genclerbirligi Ankara,820,Muscle injury,21/09/2026,800000.0,T1
+Tim Jabol-Folcarelli,Central Midfield,Trabzonspor,449,Tear of the lateral meniscus,21/09/2026,7000000.0,T1
+Arseniy Batagov,Centre-Back,Trabzonspor,449,Knee surgery,21/09/2026,11000000.0,T1
+Elayis Tavsan,Right Winger,Samsunspor,152,Broken toe,21/09/2026,1500000.0,T1
+Günay Güvenç,Goalkeeper,Galatasaray,141,Partial muscle tear,21/09/2026,200000.0,T1
+Wilfried Singo,Right-Back,Galatasaray,141,Muscle injury,30/09/2026,23000000.0,T1
+Mario Lemina,Defensive Midfield,Galatasaray,141,Groin strain,30/09/2026,4500000.0,T1
+Victor Osimhen,Centre-Forward,Galatasaray,141,Groin strain,30/09/2026,75000000.0,T1
+Enis Destan,Centre-Forward,Konyaspor,2293,Inner knee ligament tear,05/10/2026,2000000.0,T1
+Yira Sor,Left Winger,Amed SK,12382,Muscle injury,12/10/2026,2500000.0,T1
+Khusniddin Alikulov,Centre-Back,Caykur Rizespor,126,Cruciate ligament tear,19/10/2026,1200000.0,T1
+Dilhan Demir,Right Winger,Amed SK,12382,Cruciate ligament tear,09/11/2026,100000.0,T1
+Jayden Oosterwolde,Centre-Back,Fenerbahce,36,Partial muscle tear,01/12/2026,20000000.0,T1
+Kamil Ahmet Çörekçi,Right-Back,Kasimpasa,10484,Achilles tendon rupture,08/05/2027,100000.0,T1
+Youssef Chermiti,Centre-Forward,Rangers FC,124,Cruciate ligament tear,,15000000.0,SC0
+Eythor Bjørgolfsson,Centre-Forward,Motherwell FC,987,Muscle injury,,400000.0,SC0
+Paul McGinn,Right-Back,Motherwell FC,987,Knee surgery,,100000.0,SC0
+Owen Elding,Centre-Forward,Hibernian FC,903,Calf injury,,500000.0,SC0
+Adam Mayor,Left-Back,Hibernian FC,903,Groin strain,,500000.0,SC0
+Rocky Bushiri,Centre-Back,Hibernian FC,903,Achilles tendon problems,,1000000.0,SC0
+Nicky Cadden,Left Midfield,Hibernian FC,903,Calf injury,,600000.0,SC0
+Matai Akinmboni,Centre-Back,Dundee FC,511,Muscle injury,,1000000.0,SC0
+Alistair Johnston,Right-Back,Celtic FC,371,Leg injury,,8000000.0,SC0
+Kasper Høgh,Centre-Forward,Celtic FC,371,Thigh problems,,12000000.0,SC0
+José Cifuentes,Central Midfield,Rangers FC,124,Knee injury,,4000000.0,SC0
+Oisin McEntee,Centre-Back,Heart of Midlothian FC,43,Muscle injury,18/09/2026,500000.0,SC0
+Stephen Kingsley,Left-Back,Heart of Midlothian FC,43,Hamstring injury,28/09/2026,500000.0,SC0
+Ageu,Central Midfield,Heart of Midlothian FC,43,Torn muscle bundle,28/09/2026,1300000.0,SC0
+Finlay Pollock,Attacking Midfield,Heart of Midlothian FC,43,Hamstring injury,26/10/2026,75000.0,SC0
+Blair Spittal,Central Midfield,Heart of Midlothian FC,43,Ankle injury,07/12/2026,600000.0,SC0
+Tom Renaud,Defensive Midfield,Heart of Midlothian FC,43,Ankle injury,28/12/2026,400000.0,SC0
+Craig Halkett,Centre-Back,Heart of Midlothian FC,43,Achilles tendon rupture,31/12/2026,500000.0,SC0
+Lawrence Shankland,Centre-Forward,Rangers FC,124,Torn thigh muscle,05/01/2027,3000000.0,SC0
+Fedor Chalov,Centre-Forward,PAOK Thessaloniki,1091,Meniscus injury,,4000000.0,G1
+Lefteris Tasiouras,Right-Back,Volos FC,60949,unknown injury,,200000.0,G1
+Stefanos Katsikas,Right-Back,Volos FC,60949,unknown injury,,300000.0,G1
+Jan Hurtado,Centre-Forward,Volos FC,60949,Muscle strain,,400000.0,G1
+Ronaël Pierre-Gabriel,Right-Back,Volos FC,60949,unknown injury,,1000000.0,G1
+Quentin Lecoeuche,Left Midfield,Volos FC,60949,unknown injury,,300000.0,G1
+Roshon van Eijma,Centre-Back,AE Kifisia,30120,muscular problems,,375000.0,G1
+Panagiotis Deligiannidis,Right-Back,Asteras Aktor,6676,Calf injury,,450000.0,G1
+Issiaga Sylla,Left-Back,Asteras Aktor,6676,Eye injury,,700000.0,G1
+Nikolaos Papadopoulos,Goalkeeper,Asteras Aktor,6676,Adductor injury,,125000.0,G1
+Lampros Smyrlis,Left Winger,Panetolikos,6418,unknown injury,,250000.0,G1
+Mateo Mejía,Centre-Forward,Panetolikos,6418,Shin injury,,400000.0,G1
+Cristopher Núñez,Attacking Midfield,Atromitos Athens,3060,Knee injury,,550000.0,G1
+Christos Alexiou,Centre-Back,AEK Athens,2441,unknown injury,,1200000.0,G1
+Tom Louchet,Central Midfield,PAOK Thessaloniki,1091,Muscle contusion,,7000000.0,G1
+Jakub Hromada,Defensive Midfield,Iraklis Thessaloniki,47,sprain,,500000.0,G1
+Kiril Despodov,Right Winger,PAOK Thessaloniki,1091,Toe injury,,5000000.0,G1
+Soualiho Meïté,Defensive Midfield,PAOK Thessaloniki,1091,Hip injury,,1600000.0,G1
+Pantelis Hatzidiakos,Centre-Back,PAOK Thessaloniki,1091,Calf problems,,3000000.0,G1
+Lorenzo Scipioni,Defensive Midfield,Olympiacos Piraeus,683,Abdominal muscle strain,,3500000.0,G1
+Christos Sielis,Centre-Back,OFI Crete,653,unknown injury,,700000.0,G1
+Aaron Leya Iseka,Centre-Forward,OFI Crete,653,unknown injury,,400000.0,G1
+Nikolaos Marinakis,Right-Back,OFI Crete,653,Inflammation of pubic bone,,150000.0,G1
+Pavlos Pantelidis,Right Winger,Panathinaikos,265,Tibia and fibula fracture,,1000000.0,G1
+Pedro Chirivella,Defensive Midfield,Panathinaikos,265,unknown injury,,5000000.0,G1
+Dimitrios Giannoulis,Left-Back,PAOK Thessaloniki,1091,Ankle injury,05/10/2026,3000000.0,G1
+Joel Roca,Left Winger,Olympiacos Piraeus,683,Shoulder injury,05/10/2026,6000000.0,G1
+Georgios Giannoutsos,Centre-Back,Iraklis Thessaloniki,47,Metatarsal fracture,05/10/2026,250000.0,G1
+Yoel Bárcenas,Right Winger,Iraklis Thessaloniki,47,Arthroscopy,12/10/2026,650000.0,G1
+Yusuf Yazıcı,Attacking Midfield,Olympiacos Piraeus,683,Cruciate ligament tear,31/12/2026,3500000.0,G1
+Ayoub El Kaabi,Centre-Forward,Olympiacos Piraeus,683,Broken tibia,08/03/2027,4500000.0,G1
+Sverrir Ingi Ingason,Centre-Back,Panathinaikos,265,Cruciate ligament tear,30/06/2027,1800000.0,G1

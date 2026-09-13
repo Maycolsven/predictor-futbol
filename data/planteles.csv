@@ -1,0 +1,297 @@
+club_tm,club_id,valor_plantel,div,equipo
+Manchester City,281,1430000000.0,E0,Man City
+Arsenal FC,11,1330000000.0,E0,Arsenal
+Chelsea FC,631,1080000000.0,E0,Chelsea
+Liverpool FC,31,1030000000.0,E0,Liverpool
+Manchester United,985,924300000.0,E0,Man United
+Tottenham Hotspur,148,824000000.0,E0,Tottenham
+Newcastle United,762,606100000.0,E0,Newcastle
+Brighton & Hove Albion,1237,603500000.0,E0,Brighton
+Brentford FC,1148,584800000.0,E0,Brentford
+Crystal Palace,873,579200000.0,E0,Crystal Palace
+AFC Bournemouth,989,574550000.0,E0,Bournemouth
+Aston Villa,405,572500000.0,E0,Aston Villa
+Nottingham Forest,703,520500000.0,E0,Nott'm Forest
+Sunderland AFC,289,421630000.0,E0,Sunderland
+Leeds United,399,407550000.0,E0,Leeds
+Fulham FC,931,396800000.0,E0,Fulham
+Everton FC,29,394300000.0,E0,Everton
+Ipswich Town,677,330550000.0,E0,Ipswich
+Coventry City,990,296700000.0,E0,Coventry
+Hull City,3008,251900000.0,E0,Hull
+West Ham United,379,267500000.0,E1,West Ham
+Wolverhampton Wanderers,543,242450000.0,E1,Wolves
+Southampton FC,180,148300000.0,E1,Southampton
+Burnley FC,1132,147800000.0,E1,Burnley
+Middlesbrough FC,641,132400000.0,E1,Middlesbrough
+Sheffield United,350,112250000.0,E1,Sheffield United
+Swansea City,2288,108130000.0,E1,Swansea
+Norwich City,1123,103380000.0,E1,Norwich
+Birmingham City,337,100250000.0,E1,Birmingham
+Stoke City,512,97150000.0,E1,Stoke
+Wrexham AFC,1112,94500000.0,E1,Wrexham
+Watford FC,1010,82800000.0,E1,Watford
+Millwall FC,1028,82680000.0,E1,Millwall
+Derby County,22,71100000.0,E1,Derby
+Queens Park Rangers,1039,68750000.0,E1,QPR
+Bristol City,698,61850000.0,E1,Bristol City
+Preston North End,466,59000000.0,E1,Preston
+West Bromwich Albion,984,57850000.0,E1,West Brom
+Charlton Athletic,358,41280000.0,E1,Charlton
+Bolton Wanderers,355,37880000.0,E1,Bolton
+Portsmouth FC,1020,34930000.0,E1,Portsmouth
+Blackburn Rovers,164,34600000.0,E1,Blackburn
+Cardiff City,603,29300000.0,E1,Cardiff
+Lincoln City,1198,21300000.0,E1,Lincoln
+Real Madrid,418,1460000000.0,SP1,Real Madrid
+FC Barcelona,131,1260000000.0,SP1,Barcelona
+Atlético de Madrid,13,679700000.0,SP1,Ath Madrid
+Villarreal CF,1050,331600000.0,SP1,Villarreal
+Real Sociedad,681,278300000.0,SP1,Sociedad
+Real Betis Balompié,150,254600000.0,SP1,Betis
+Athletic Bilbao,621,231000000.0,SP1,Ath Bilbao
+Celta de Vigo,940,173000000.0,SP1,Celta
+Sevilla FC,368,169100000.0,SP1,Sevilla
+Valencia CF,1049,149100000.0,SP1,Valencia
+RCD Espanyol Barcelona,714,127800000.0,SP1,Espanol
+Deportivo A Coruña,897,115800000.0,SP1,La Coruna
+Racing Santander,630,107500000.0,SP1,Santander
+Getafe CF,3709,92300000.0,SP1,Getafe
+Levante UD,3368,86900000.0,SP1,Levante
+Rayo Vallecano,367,86850000.0,SP1,Vallecano
+CA Osasuna,331,77900000.0,SP1,Osasuna
+Elche CF,1531,74000000.0,SP1,Elche
+Deportivo Alavés,1108,66700000.0,SP1,Alaves
+Málaga CF,1084,55350000.0,SP1,Malaga
+Girona FC,12321,68600000.0,SP2,Girona
+UD Almería,3302,59100000.0,SP2,Almeria
+RCD Mallorca,237,50200000.0,SP2,Mallorca
+Real Oviedo,2497,35450000.0,SP2,Oviedo
+CD Leganés,1244,31900000.0,SP2,Leganes
+UD Las Palmas,472,29700000.0,SP2,Las Palmas
+Cádiz CF,2687,29450000.0,SP2,Cadiz
+Sporting Gijón,2448,27850000.0,SP2,Sp Gijon
+CD Castellón,2502,25350000.0,SP2,Castellon
+Real Valladolid CF,366,24400000.0,SP2,Valladolid
+Real Sociedad B,9899,22800000.0,SP2,Sociedad B
+Burgos CF,1536,20650000.0,SP2,Burgos
+Albacete Balompié,1532,17450000.0,SP2,Albacete
+SD Eibar,1533,16399999.999999998,SP2,Eibar
+FC Andorra,10718,16050000.0,SP2,Andorra
+Córdoba CF,993,16000000.0,SP2,Cordoba
+Granada CF,16795,15650000.0,SP2,Granada
+CD Tenerife,648,13580000.0,SP2,Tenerife
+CD Eldense,12567,11680000.0,SP2,Eldense
+AD Ceuta FC,8568,11300000.0,SP2,Ceuta
+RC Celta Fortuna,8733,10900000.0,SP2,Celta B
+CE Sabadell FC,11422,10550000.0,SP2,Sabadell
+Bayern Munich,27,1040000000.0,D1,Bayern Munich
+Borussia Dortmund,16,564450000.0,D1,Dortmund
+RB Leipzig,23826,487950000.0,D1,RB Leipzig
+Bayer 04 Leverkusen,15,480950000.0,D1,Leverkusen
+VfB Stuttgart,79,379700000.0,D1,Stuttgart
+Eintracht Frankfurt,24,288250000.0,D1,Ein Frankfurt
+TSG 1899 Hoffenheim,533,280950000.0,D1,Hoffenheim
+SC Freiburg,60,211400000.0,D1,Freiburg
+FC Augsburg,167,171800000.0,D1,Augsburg
+1.FSV Mainz 05,39,164700000.0,D1,Mainz
+1.FC Köln,3,156100000.0,D1,FC Koln
+Hamburger SV,41,152800000.0,D1,Hamburg
+Borussia Mönchengladbach,18,138550000.0,D1,M'gladbach
+SV Werder Bremen,86,122080000.0,D1,Werder Bremen
+1.FC Union Berlin,89,115780000.0,D1,Union Berlin
+FC Schalke 04,33,70930000.0,D1,Schalke 04
+SV 07 Elversberg,64,58050000.0,D1,Elversberg
+SC Paderborn 07,127,48380000.0,D1,Paderborn
+VfL Wolfsburg,82,111900000.0,D2,Wolfsburg
+FC St. Pauli,35,48430000.0,D2,St Pauli
+1.FC Nuremberg,4,42450000.0,D2,Nurnberg
+1.FC Heidenheim 1846,2036,37900000.0,D2,Heidenheim
+Hannover 96,42,34400000.0,D2,Hannover
+1.FC Kaiserslautern,2,33750000.0,D2,Kaiserslautern
+Karlsruher SC,48,32830000.0,D2,Karlsruhe
+Holstein Kiel,269,32030000.0,D2,Holstein Kiel
+SV Darmstadt 98,105,28250000.0,D2,Darmstadt
+1.FC Magdeburg,187,26480000.0,D2,Magdeburg
+Hertha BSC,44,25280000.0,D2,Hertha
+VfL Bochum,80,24830000.0,D2,Bochum
+SG Dynamo Dresden,129,23930000.0,D2,Dresden
+SpVgg Greuther Fürth,65,22250000.0,D2,Greuther Furth
+Arminia Bielefeld,10,19700000.0,D2,Bielefeld
+Eintracht Braunschweig,23,19280000.0,D2,Braunschweig
+VfL Osnabrück,81,12150000.0,D2,Osnabruck
+FC Energie Cottbus,25,11150000.0,D2,Cottbus
+Inter Milan,46,730300000.0,I1,Inter
+Juventus FC,506,619300000.0,I1,Juventus
+Como 1907,1047,535150000.0,I1,Como
+AS Roma,12,484600000.0,I1,Roma
+AC Milan,5,474350000.0,I1,Milan
+Atalanta BC,800,436050000.0,I1,Atalanta
+SSC Napoli,6195,432500000.0,I1,Napoli
+ACF Fiorentina,430,322750000.0,I1,Fiorentina
+SS Lazio,398,255850000.0,I1,Lazio
+Bologna FC 1909,1025,216750000.0,I1,Bologna
+US Sassuolo,6574,198950000.0,I1,Sassuolo
+Torino FC,416,177100000.0,I1,Torino
+Genoa CFC,252,169000000.0,I1,Genoa
+Udinese Calcio,410,151300000.0,I1,Udinese
+Parma Calcio 1913,130,149230000.0,I1,Parma
+Cagliari Calcio,1390,120700000.0,I1,Cagliari
+Venezia FC,607,116150000.0,I1,Venezia
+AC Monza,2919,103450000.0,I1,Monza
+Frosinone Calcio,8970,94200000.0,I1,Frosinone
+US Lecce,1005,82500000.0,I1,Lecce
+Pisa Sporting Club,4172,63830000.0,I2,Pisa
+Palermo FC,458,52080000.0,I2,Palermo
+US Cremonese,2239,49750000.0,I2,Cremonese
+Hellas Verona,276,47830000.0,I2,Verona
+UC Sampdoria,1038,44550000.0,I2,Sampdoria
+Modena FC,1385,29250000.0,I2,Modena
+US Avellino 1912,2331,28680000.0,I2,Avellino
+Mantova 1911,2581,27850000.0,I2,Mantova
+Cesena FC,1429,27780000.0,I2,Cesena
+Calcio Padova,3037,27050000.0,I2,Padova
+FC Südtirol,4554,24330000.0,I2,Sudtirol
+Carrarese Calcio 1908,4159,22150000.0,I2,Carrarese
+US Catanzaro,4097,21830000.0,I2,Catanzaro
+FC Empoli,749,18850000.0,I2,Empoli
+Benevento Calcio,4171,16750000.0,I2,Benevento
+SS Juve Stabia,5587,14430000.0,I2,Juve Stabia
+LR Vicenza,2655,12700000.0,I2,Vicenza
+Ascoli Calcio,408,12700000.0,I2,Ascoli
+SS Arezzo,4255,12200000.0,I2,Arezzo
+Virtus Entella,20519,10730000.0,I2,Virtus Entella
+Paris Saint-Germain,583,1360000000.0,F1,Paris SG
+AS Monaco,162,314650000.0,F1,Monaco
+RC Strasbourg Alsace,667,287450000.0,F1,Strasbourg
+Olympique Lyon,1041,258650000.0,F1,Lyon
+LOSC Lille,1082,241600000.0,F1,Lille
+Stade Rennais FC,273,233300000.0,F1,Rennes
+RC Lens,826,203200000.0,F1,Lens
+Olympique Marseille,244,181850000.0,F1,Marseille
+Paris FC,10004,173200000.0,F1,Paris FC
+OGC Nice,417,139600000.0,F1,Nice
+FC Toulouse,415,110900000.0,F1,Toulouse
+AJ Auxerre,290,91200000.0,F1,Auxerre
+FC Lorient,1158,90050000.0,F1,Lorient
+Stade Brestois 29,3911,69600000.0,F1,Brest
+Angers SCO,1420,64000000.0,F1,Angers
+Le Havre AC,738,60450000.0,F1,Le Havre
+ESTAC Troyes,1095,40280000.0,F1,Troyes
+Le Mans FC,1164,27550000.0,F1,Le Mans
+FC Nantes,995,76980000.0,F2,Nantes
+AS Saint-Étienne,618,66650000.00000001,F2,St Etienne
+Stade Reims,1421,51980000.0,F2,Reims
+FC Metz,347,38850000.0,F2,Metz
+Montpellier HSC,969,29850000.0,F2,Montpellier
+Clermont Foot 63,3524,16600000.000000002,F2,Clermont
+Red Star FC,1154,14280000.0,F2,Red Star
+AS Nancy-Lorraine,1159,14200000.0,F2,Nancy
+Rodez AF,11273,13700000.0,F2,Rodez
+Grenoble Foot 38,1290,11700000.0,F2,Grenoble
+EA Guingamp,855,11650000.0,F2,Guingamp
+USL Dunkerque,9202,11450000.0,F2,Dunkerque
+Pau FC,3166,10300000.0,F2,Pau FC
+Stade Lavallois,1080,8980000.0,F2,Laval
+FC Annecy,30204,8900000.0,F2,Annecy
+FC Sochaux-Montbéliard,750,8480000.0,F2,Sochaux
+US Boulogne,7042,8199999.999999999,F2,Boulogne
+Dijon FCO,2969,5680000.0,F2,Dijon
+FC Porto,720,464800000.0,P1,Porto
+Sporting CP,336,378700000.0,P1,Sp Lisbon
+SL Benfica,294,377050000.0,P1,Benfica
+SC Braga,1075,150300000.0,P1,Sp Braga
+FC Famalicão,3329,61650000.0,P1,Famalicao
+Vitória Guimarães SC,2420,52100000.0,P1,Guimaraes
+FC Alverca,2521,44900000.0,P1,Alverca
+GD Estoril Praia,1465,44700000.0,P1,Estoril
+Rio Ave FC,2425,42330000.0,P1,Rio Ave
+Casa Pia AC,3268,28550000.0,P1,Casa Pia
+CF Estrela Amadora,2431,26980000.0,P1,Estrela
+FC Arouca,8024,26880000.0,P1,Arouca
+Gil Vicente FC,2424,26100000.0,P1,Gil Vicente
+Moreirense FC,979,24950000.0,P1,Moreirense
+CD Nacional,982,21450000.0,P1,Nacional
+CD Santa Clara,2423,21430000.0,P1,Santa Clara
+Académico Viseu FC,7788,19330000.0,P1,Academico Viseu
+CS Marítimo,1301,16880000.0,P1,Maritimo
+PSV Eindhoven,383,284450000.0,N1,PSV Eindhoven
+Ajax Amsterdam,610,218700000.0,N1,Ajax
+Feyenoord Rotterdam,234,210730000.0,N1,Feyenoord
+AZ Alkmaar,1090,129300000.0,N1,AZ Alkmaar
+FC Twente Enschede,317,77350000.0,N1,Twente
+FC Utrecht,200,63600000.0,N1,Utrecht
+SC Heerenveen,306,52650000.0,N1,Heerenveen
+NEC Nijmegen,467,44680000.0,N1,Nijmegen
+FC Groningen,202,32850000.0,N1,Groningen
+Sparta Rotterdam,468,29300000.0,N1,Sparta Rotterdam
+PEC Zwolle,1269,25280000.0,N1,Zwolle
+Go Ahead Eagles,1435,22200000.0,N1,Go Ahead Eagles
+Willem II Tilburg,403,21650000.0,N1,Willem II
+Excelsior Rotterdam,798,17130000.0,N1,Excelsior
+Fortuna Sittard,385,16900000.0,N1,For Sittard
+ADO Den Haag,1268,16780000.0,N1,Den Haag
+SC Cambuur Leeuwarden,133,13800000.0,N1,Cambuur
+SC Telstar,1434,8700000.0,N1,Telstar
+Club Brugge KV,2282,199000000.0,B1,Club Brugge
+KRC Genk,1184,98500000.0,B1,Genk
+RSC Anderlecht,58,93800000.0,B1,Anderlecht
+Union Saint-Gilloise,3948,93700000.0,B1,St. Gilloise
+Royal Antwerp FC,1096,61050000.0,B1,Antwerp
+KAA Gent,157,57300000.0,B1,Gent
+Standard Liège,3057,53250000.0,B1,Standard
+KVC Westerlo,968,41930000.0,B1,Westerlo
+KV Mechelen,354,41600000.0,B1,Mechelen
+Sint-Truidense VV,475,36880000.0,B1,St Truiden
+Cercle Brugge ,520,35550000.0,B1,Cercle Brugge
+Oud-Heverlee Leuven,2727,30900000.0,B1,Oud-Heverlee Leuven
+Royal Charleroi SC,172,26850000.0,B1,Charleroi
+Lommel SK,5026,25600000.0,B1,Lommel SK
+Zulte Waregem,3508,25550000.0,B1,Waregem
+KV Kortrijk,601,23350000.0,B1,Kortrijk
+RAAL La Louvière,3901,21250000.0,B1,RAAL La Louviere
+SK Beveren,28643,16129999.999999998,B1,Beveren
+Galatasaray,141,411600000.0,T1,Galatasaray
+Fenerbahce,36,280700000.0,T1,Fenerbahce
+Besiktas JK,114,266600000.00000003,T1,Besiktas
+Trabzonspor,449,185800000.0,T1,Trabzonspor
+Basaksehir FK,6890,75500000.0,T1,Buyuksehyr
+Corum FK,37951,67250000.0,T1,Corum
+Göztepe,1467,60100000.0,T1,Goztep
+Samsunspor,152,54330000.0,T1,Samsunspor
+Caykur Rizespor,126,48000000.0,T1,Rizespor
+Konyaspor,2293,38300000.0,T1,Konyaspor
+Kasimpasa,10484,36300000.0,T1,Kasimpasa
+Alanyaspor,11282,31850000.0,T1,Alanyaspor
+Gaziantep FK,2832,29800000.0,T1,Gaziantep
+Genclerbirligi Ankara,820,28850000.0,T1,Genclerbirligi
+Amed SK,12382,27630000.0,T1,Amedspor
+Erzurumspor FK,39722,26880000.0,T1,Erzurumspor
+Kocaelispor,120,25900000.0,T1,Kocaelispor
+Eyüpspor,7160,11500000.0,T1,Eyupspor
+Rangers FC,124,148650000.0,SC0,Rangers
+Celtic FC,371,118400000.0,SC0,Celtic
+Heart of Midlothian FC,43,22030000.0,SC0,Hearts
+Hibernian FC,903,19050000.0,SC0,Hibernian
+Motherwell FC,987,16850000.0,SC0,Motherwell
+Aberdeen FC,370,14900000.0,SC0,Aberdeen
+Dundee United FC,1519,12630000.0,SC0,Dundee United
+St. Mirren FC,465,7880000.0,SC0,St Mirren
+Dundee FC,511,6880000.0,SC0,Dundee
+Kilmarnock FC,2553,6800000.0,SC0,Kilmarnock
+Falkirk FC,1191,6500000.0,SC0,Falkirk
+St. Johnstone FC,2578,6480000.0,SC0,St Johnstone
+Olympiacos Piraeus,683,184450000.0,G1,Olympiakos
+Panathinaikos,265,123750000.0,G1,Panathinaikos
+PAOK Thessaloniki,1091,108800000.0,G1,PAOK
+AEK Athens,2441,86200000.0,G1,AEK
+Aris Thessaloniki,605,40350000.0,G1,Aris
+OFI Crete,653,18750000.0,G1,OFI Crete
+Levadiakos,2672,16530000.000000002,G1,Levadeiakos
+Volos FC,60949,13630000.0,G1,Volos NFC
+Panetolikos,6418,13450000.0,G1,Panetolikos
+Atromitos Athens,3060,13000000.0,G1,Atromitos
+Asteras Aktor,6676,12950000.0,G1,Asteras Tripolis
+Kalamata FC,9,11950000.0,G1,Kalamata
+Iraklis Thessaloniki,47,11030000.0,G1,Iraklis
+AE Kifisia,30120,10300000.0,G1,Kifisia
