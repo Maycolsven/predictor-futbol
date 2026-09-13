@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.streamlit/secrets.toml
+.env
+
+# datos crudos y cachés (se regeneran solos; pesan mucho para el repo)
+data/raw/
+data/lambdas_hist.pkl
+data/*.log
+data/*.pkl.bak

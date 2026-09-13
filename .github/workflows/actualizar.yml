@@ -1,0 +1,41 @@
+name: Actualización diaria
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # todos los días 06:00 UTC (01:00 en Perú)
+  workflow_dispatch:       # y a mano desde la pestaña Actions
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      # Los CSV históricos y la caché de goles esperados no van al repo: se guardan entre corridas
+      - uses: actions/cache@v4
+        with:
+          path: |
+            data/raw
+            data/lambdas_hist.pkl
+          key: datos-${{ github.run_id }}
+          restore-keys: datos-
+
+      - run: pip install -r requirements.txt
+
+      - run: python actualizar.py --rapido
+
+      - name: Guardar resultados en el repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "Actualización automática $(date -u +'%Y-%m-%d %H:%M')" || echo "Sin cambios"
+          git push
