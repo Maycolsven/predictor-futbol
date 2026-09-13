@@ -16,45 +16,81 @@ from src import config, registro
 from src.poisson import LINEAS
 from src.prediccion import Predictor
 
-st.set_page_config(page_title="Predictor Fútbol", page_icon="⚽", layout="wide")
+st.set_page_config(page_title="Predictor Fútbol", page_icon=":material/sports_soccer:", layout="wide",
+                   initial_sidebar_state="collapsed")
 
 NOMBRE_LIGA = {c: n for c, (n, _, _) in config.LIGAS.items()} | {"CL": "Champions League"}
 COLOR = {"L": "#22c55e", "E": "#6b7280", "V": "#ef4444"}
 PCT = st.column_config.NumberColumn(format="%.0f%%")
 DIAS_SEMANA = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
-ETIQUETA_MODELO = {"Elo": "Elo (fase 1)", "Poisson": "Poisson (fase 2)", "ML": "Machine learning (fase 3)",
-                   "Final": "⭐ Final (stacking, lo que usa la app)", "Base": "Base (siempre la frecuencia)",
+ETIQUETA_MODELO = {"Elo": "Elo", "Poisson": "Poisson", "ML": "Machine learning",
+                   "Final": "Final (stacking, lo que usa la app)", "Base": "Base (siempre la frecuencia)",
                    "Casas": "Casas de apuestas", "Sin lesionados": "Final sin ajuste por lesionados",
-                   "Final (con cuotas)": "⭐ Final (mismos partidos)"}
+                   "Final (con cuotas)": "Final (mismos partidos)"}
 EN_NUBE = os.environ.get("HOME", "").startswith("/home/adminuser")  # Streamlit Community Cloud
 CUOTAS = ("cuota_l", "cuota_e", "cuota_v", "cuota_o25", "cuota_u25")
 
 st.markdown("""
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+html, body, [class*="css"], .stMarkdown, .stCaption, button, input {font-family: 'Inter', sans-serif !important;}
 .stAppDeployButton, footer {display: none;}
-.block-container {padding-top: 1.2rem; padding-bottom: 2rem;}
-.tarjeta {background: #151f33; border: 1px solid #1f2b45; border-radius: 14px; padding: 12px 14px 8px 14px;
+.block-container {padding-top: 3.2rem; padding-bottom: 2rem; max-width: 1100px;}
+h1, h2, h3, h4 {letter-spacing: -0.01em;}
+.encabezado {display: flex; justify-content: space-between; align-items: baseline; padding: 4px 0 10px 0;
+             border-bottom: 1px solid #1f2b45; margin-bottom: 8px;}
+.encabezado .titulo {font-size: 1.35rem; font-weight: 700;}
+.encabezado .estado {font-size: 0.78rem; color: #94a3b8;}
+.seccion {font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #94a3b8;
+          margin: 14px 0 6px 0;}
+.leyenda {font-size: 0.8rem; color: #94a3b8; margin-bottom: 10px;}
+.punto {display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin: 0 4px 0 10px; vertical-align: middle;}
+.tarjeta {background: #151f33; border: 1px solid #1f2b45; border-radius: 12px; padding: 12px 14px 10px 14px;
           margin-bottom: 6px;}
-.tarjeta .meta {font-size: 0.78rem; color: #94a3b8; margin-bottom: 4px;}
-.tarjeta .equipos {display: flex; justify-content: space-between; align-items: center; font-weight: 700;
-                   font-size: 1.05rem; margin-bottom: 8px;}
-.tarjeta .equipos .vs {color: #64748b; font-weight: 400; font-size: 0.8rem; padding: 0 8px;}
+.tarjeta .meta {font-size: 0.75rem; color: #94a3b8; margin-bottom: 6px; display: flex; justify-content: space-between;}
+.tarjeta .meta .liga {color: #cbd5e1; font-weight: 500;}
+.tarjeta .equipos {display: flex; justify-content: space-between; align-items: center; font-weight: 600;
+                   font-size: 1rem; margin-bottom: 8px;}
+.tarjeta .equipos .vs {color: #475569; font-weight: 400; font-size: 0.75rem; padding: 0 8px;}
 .tarjeta .equipos .visita {text-align: right;}
-.barra {display: flex; height: 10px; border-radius: 6px; overflow: hidden; background: #0b1220;}
+.barra {display: flex; height: 8px; border-radius: 4px; overflow: hidden; background: #0b1220;}
 .barra span {display: block; height: 100%;}
-.probs {display: flex; justify-content: space-between; font-size: 0.8rem; margin-top: 4px; color: #cbd5e1;}
-.tarjeta .pie {display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.85rem; color: #e2e8f0;}
-.tarjeta .pie b {color: #22c55e;}
+.probs {display: flex; justify-content: space-between; font-size: 0.78rem; margin-top: 4px; color: #94a3b8;
+        font-variant-numeric: tabular-nums;}
+.tarjeta .pie {display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.82rem; color: #cbd5e1;
+               font-variant-numeric: tabular-nums;}
+.tarjeta .pie .fav {font-weight: 600; color: #e5e7eb;}
+.tarjeta .pie .fav .punto {margin-left: 0;}
 .marcador {display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px;
-           background: #151f33; border-radius: 14px; padding: 16px 18px; margin: 4px 0 10px 0;}
-.marcador .nombre {font-size: 1.25rem; font-weight: 800;}
-.marcador .pct {font-size: 2rem; font-weight: 800; line-height: 1;}
-.marcador .centro {text-align: center; color: #94a3b8; font-size: 0.85rem;}
-.marcador .centro .empate {font-size: 1.3rem; font-weight: 700; color: #cbd5e1;}
+           background: #151f33; border: 1px solid #1f2b45; border-radius: 12px; padding: 16px 18px; margin: 4px 0 10px 0;}
+.marcador .nombre {font-size: 1.15rem; font-weight: 600;}
+.marcador .pct {font-size: 2rem; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums;}
+.marcador .centro {text-align: center; color: #94a3b8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;}
+.marcador .centro .empate {font-size: 1.25rem; font-weight: 600; color: #cbd5e1; letter-spacing: 0;}
 .marcador .visita {text-align: right;}
-div[data-testid="stButton"] > button {border-radius: 10px;}
+.chips {display: flex; gap: 4px; margin: 4px 0 8px 0;}
+.chip {display: inline-flex; width: 26px; height: 26px; border-radius: 6px; align-items: center; justify-content: center;
+       font-size: 0.72rem; font-weight: 700; color: #0b1220;}
+.chip.g {background: #22c55e;} .chip.e {background: #94a3b8;} .chip.p {background: #ef4444;}
+.linea {font-size: 0.82rem; color: #cbd5e1; margin: 2px 0;}
+.linea b {display: inline-block; width: 14px; font-weight: 700;}
+.linea b.g {color: #22c55e;} .linea b.e {color: #94a3b8;} .linea b.p {color: #ef4444;}
+div[data-testid="stButton"] > button {border-radius: 8px; font-weight: 500;}
+div[data-testid="stMetric"] {background: #151f33; border: 1px solid #1f2b45; border-radius: 10px; padding: 10px 14px;}
+div[data-testid="stMetricLabel"] {color: #94a3b8;}
 </style>
 """, unsafe_allow_html=True)
+
+
+def seccion(texto):
+    st.markdown(f'<div class="seccion">{texto}</div>', unsafe_allow_html=True)
+
+
+def leyenda_html():
+    return ('<div class="leyenda">Barra de probabilidades:'
+            + "".join(f'<span class="punto" style="background:{COLOR[k]}"></span>{t}'
+                      for k, t in (("L", "gana el local"), ("E", "empate"), ("V", "gana la visita")))
+            + ' &nbsp;·&nbsp; <b>+2.5</b> = probabilidad de 3 goles o más &nbsp;·&nbsp; último número = marcador más probable</div>')
 
 
 # ---------------------------------------------------------------- datos
@@ -101,11 +137,16 @@ def predecir_fixtures(_pred, version, ligas, dias):
 # ---------------------------------------------------------------- piezas visuales
 
 def favorito(p, local, visita):
-    """'Real Madrid 58%' o 'Parejo' si nadie pasa de 45% con ventaja clara."""
+    """(texto, clave de color): 'Real Madrid 58%' o 'Parejo' si nadie pasa de 45% con ventaja clara."""
     pl, pe, pv = p["L"], p["E"], p["V"]
     if max(pl, pv) < 0.45 and abs(pl - pv) < 0.08:
-        return "⚖️ Parejo"
-    return f"🏠 {local} {pl:.0%}" if pl > pv else f"✈️ {visita} {pv:.0%}"
+        return "Parejo", "E"
+    return (f"{local} {pl:.0%}", "L") if pl > pv else (f"{visita} {pv:.0%}", "V")
+
+
+def favorito_html(p, local, visita):
+    texto, k = favorito(p, local, visita)
+    return f'<span class="fav"><span class="punto" style="background:{COLOR[k]}"></span>{html.escape(texto)}</span>'
 
 
 def barra_html(p):
@@ -119,12 +160,13 @@ def tarjeta_html(r, p):
     hora = "" if pd.isna(r["hora"]) else f" · {r['hora']}"
     return f"""
 <div class="tarjeta">
-  <div class="meta">{DIAS_SEMANA[r['fecha'].weekday()]} {r['fecha']:%d/%m}{hora} · {NOMBRE_LIGA[r['competicion']]}</div>
+  <div class="meta"><span>{DIAS_SEMANA[r['fecha'].weekday()]} {r['fecha']:%d/%m}{hora}</span>
+       <span class="liga">{NOMBRE_LIGA[r['competicion']]}</span></div>
   <div class="equipos"><span class="local">{html.escape(r['local'])}</span><span class="vs">vs</span>
        <span class="visita">{html.escape(r['visita'])}</span></div>
   {barra_html(p['1x2'])}
-  <div class="pie"><span><b>{html.escape(favorito(p['1x2'], r['local'], r['visita']))}</b></span>
-       <span>+2.5: {p['over']['2.5']:.0%}</span><span>{gl}-{gv}</span></div>
+  <div class="pie">{favorito_html(p['1x2'], r['local'], r['visita'])}
+       <span>+2.5 &nbsp;{p['over']['2.5']:.0%}</span><span>{gl}-{gv}</span></div>
 </div>"""
 
 
@@ -138,17 +180,20 @@ def marcador_html(local, visita, p):
 </div>"""
 
 
-def forma(partidos, equipo, n=5):
+def forma_html(partidos, equipo, n=5):
+    """Fichas G/E/P de los últimos partidos + una línea por partido."""
     p = partidos[(partidos["local"] == equipo) | (partidos["visita"] == equipo)].tail(n).iloc[::-1]
-    filas = []
+    chips, lineas = [], []
     for r in p.itertuples():
         es_local = r.local == equipo
         gf, gc = (r.gl, r.gv) if es_local else (r.gv, r.gl)
-        icono = "✅" if gf > gc else "➖" if gf == gc else "❌"
+        k = "g" if gf > gc else "e" if gf == gc else "p"
         rival = r.visita if es_local else r.local
-        filas.append(f"{icono} {gf}-{gc} {'vs' if es_local else 'en'} {rival} · "
-                     f"{NOMBRE_LIGA.get(r.competicion, r.competicion)} · {r.fecha:%d/%m/%y}")
-    return filas
+        chips.append(f'<span class="chip {k}">{k.upper()}</span>')
+        lineas.append(f'<div class="linea"><b class="{k}">{k.upper()}</b> {gf}-{gc} {"vs" if es_local else "en"} '
+                      f'{html.escape(rival)} <span style="color:#64748b">· {NOMBRE_LIGA.get(r.competicion, r.competicion)}'
+                      f' · {r.fecha:%d/%m/%y}</span></div>')
+    return f'<div class="chips">{"".join(chips)}</div>' + "".join(lineas)
 
 
 def mapa_marcadores(matriz, local, visita):
@@ -222,7 +267,7 @@ def mostrar_detalle(p, local, visita, cuotas=None, clave=""):
         texto += " · cruce entre ligas (se calcula como partido de Champions)"
     st.caption(texto)
 
-    st.markdown("#### ⚽ Goles")
+    seccion("Goles")
     ll, lv = p["goles"]
     g1, g2, g3, g4 = st.columns(4)
     g1.metric(f"Esperados {local}", f"{ll:.2f}")
@@ -240,7 +285,7 @@ def mostrar_detalle(p, local, visita, cuotas=None, clave=""):
                                     "Menos de": (1 - p["over"][linea]) * 100} for linea in LINEAS]),
                      hide_index=True, width="stretch", column_config={"Más de": PCT, "Menos de": PCT})
 
-    st.markdown("#### 🚑 Lesionados")
+    seccion("Lesionados")
     b1, b2 = st.columns(2)
     for col, equipo, imp in ((b1, local, p["bajas"]["L"]), (b2, visita, p["bajas"]["V"])):
         with col:
@@ -251,17 +296,17 @@ def mostrar_detalle(p, local, visita, cuotas=None, clave=""):
                 st.dataframe(tabla_lesionados(imp), hide_index=True, width="stretch",
                              column_config={"Valor (M€)": st.column_config.NumberColumn(format="%.1f")})
             else:
-                st.caption(f"{equipo}: sin lesionados 🎉")
+                st.caption(f"{equipo}: sin lesionados")
 
-    st.markdown("#### 📋 Forma reciente")
+    seccion("Forma reciente")
     f1, f2 = st.columns(2)
     with f1:
         st.markdown(f"**{local}**")
-        st.markdown("\n".join(f"- {x}" for x in forma(partidos, local)))
+        st.markdown(forma_html(partidos, local), unsafe_allow_html=True)
     with f2:
         st.markdown(f"**{visita}**")
-        st.markdown("\n".join(f"- {x}" for x in forma(partidos, visita)))
-    st.markdown("#### 📈 Evolución del Elo")
+        st.markdown(forma_html(partidos, visita), unsafe_allow_html=True)
+    seccion("Evolución del Elo (últimos 4 años)")
     st.plotly_chart(grafico_elo(historial, local, visita), width="stretch", key=f"elo{clave}")
 
 
@@ -274,8 +319,8 @@ def ventana_detalle(r, p):
 # ---------------------------------------------------------------- barra lateral y carga
 
 with st.sidebar:
-    st.title("⚽ Predictor")
-    if not EN_NUBE and st.button("🔄 Actualizar datos", width="stretch",
+    st.markdown("**Predictor Fútbol**")
+    if not EN_NUBE and st.button("Actualizar datos", width="stretch",
                                  help="Baja resultados, próximos partidos y lesionados, y reajusta los modelos (~3 min)"):
         with st.spinner("Actualizando…"):
             r = subprocess.run([sys.executable, "actualizar.py", "--rapido"], cwd=config.RAIZ,
@@ -296,15 +341,18 @@ partidos, historial, fixtures, reg = cargar_datos(version_datos())
 info = pred.info
 
 with st.sidebar:
-    st.caption(f"Actualizado: {info['actualizado'].replace('T', ' ')}")
-    st.caption(f"Lesionados: {pred.fecha_bajas or 'sin datos'}")
-    st.caption(f"{len(partidos):,} partidos desde {partidos['fecha'].min():%Y}")
-    st.caption("Elo + Poisson + ML (con cuotas) + lesionados, combinados con stacking")
+    st.caption(f"{len(partidos):,} partidos desde {partidos['fecha'].min():%Y} · 16 ligas + Champions")
+    st.caption("Modelos: Elo, Poisson (Dixon-Coles), machine learning con cuotas y lesionados, combinados con stacking.")
     if EN_NUBE:
         st.caption("Se actualiza solo todos los días a la 1:00 a.m. (Perú).")
 
+actualizado = pd.Timestamp(info["actualizado"])
+st.markdown(f'<div class="encabezado"><span class="titulo">Predictor Fútbol</span>'
+            f'<span class="estado">Datos al {actualizado:%d/%m/%Y %H:%M} · Lesionados {pred.fecha_bajas or "sin datos"}</span></div>',
+            unsafe_allow_html=True)
+
 tab_prox, tab_vs, tab_rank, tab_hist, tab_eval = st.tabs(
-    ["📅 Partidos", "⚔️ Enfrentamiento", "🏆 Ranking Elo", "📈 Historial", "📊 ¿Qué tan bueno es?"])
+    ["Partidos", "Enfrentamiento", "Ranking Elo", "Historial", "Evaluación"])
 
 
 # ---------------------------------------------------------------- partidos
@@ -322,8 +370,7 @@ with tab_prox:
         if not lista:
             st.info("No hay partidos para ese filtro.")
         else:
-            st.caption("Toca **Ver detalle** en un partido. Barra: 🟩 gana el local · ⬜ empate · 🟥 gana la visita · "
-                       "**+2.5** = probabilidad de 3 goles o más · último número = marcador más probable.")
+            st.markdown(leyenda_html(), unsafe_allow_html=True)
             columnas = st.columns(2)
             for i, (r, p) in enumerate(lista):
                 with columnas[i % 2]:
@@ -388,7 +435,7 @@ with tab_hist:
         else:
             st.markdown(f"**{res['partidos']} partidos resueltos** ({res['desde']} – {res['hasta']}) · "
                         f"{res['pendientes']} pendientes")
-            st.caption("¿Quién gana? (1X2)")
+            seccion("Quién gana (1X2)")
             tabla_metricas(res["1x2"])
             k1, k2, k3 = st.columns(3)
             k1.metric("Más de 2.5 · log-loss", f"{res['over25']['Final']['log_loss']:.4f}",
@@ -401,14 +448,14 @@ with tab_hist:
             fig.update_layout(height=260, margin=dict(l=0, r=0, t=10, b=0), yaxis=dict(title="% acierto 1X2"),
                               paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
             st.plotly_chart(fig, width="stretch")
-        st.caption("Últimas predicciones")
+        seccion("Últimas predicciones")
         ult = reg.sort_values("fecha", ascending=False).head(60).copy()
-        ult["Pronóstico"] = [favorito({"L": a, "E": b, "V": c}, l, v)
+        ult["Pronóstico"] = [favorito({"L": a, "E": b, "V": c}, l, v)[0]
                              for a, b, c, l, v in zip(ult["pL"], ult["pE"], ult["pV"], ult["local"], ult["visita"])]
         ult["Resultado"] = [("" if pd.isna(g) else f"{int(g)}-{int(h)}") for g, h in zip(ult["gl"], ult["gv"])]
-        ult["✓"] = [("" if pd.isna(r_) else ("✅" if "LEV"[int(np.argmax([a, b, c]))] == r_ else "❌"))
-                    for a, b, c, r_ in zip(ult["pL"], ult["pE"], ult["pV"], ult["resultado"])]
-        st.dataframe(ult[["fecha", "local", "visita", "Pronóstico", "marcador", "Resultado", "✓"]]
+        ult["Acierto"] = [("pendiente" if pd.isna(r_) else ("sí" if "LEV"[int(np.argmax([a, b, c]))] == r_ else "no"))
+                          for a, b, c, r_ in zip(ult["pL"], ult["pE"], ult["pV"], ult["resultado"])]
+        st.dataframe(ult[["fecha", "local", "visita", "Pronóstico", "marcador", "Resultado", "Acierto"]]
                      .rename(columns={"fecha": "Fecha", "local": "Local", "visita": "Visita", "marcador": "Marcador prob."}),
                      hide_index=True, width="stretch", column_config={"Fecha": st.column_config.DateColumn(format="DD/MM")})
 
@@ -427,11 +474,11 @@ with tab_eval:
     vista = st.radio("Ver", ["Promedio"] + [nombre_t(t) for t in temps], horizontal=True)
     e = ev if vista == "Promedio" else ev["por_temporada"][temps[[nombre_t(t) for t in temps].index(vista)]]
 
-    st.subheader("¿Quién gana? (1X2)")
+    seccion("Quién gana (1X2)")
     tabla_metricas(e["1x2"])
     st.caption("Solo los partidos de liga que tienen cuotas:")
     tabla_metricas(e["1x2_con_cuotas"])
-    st.subheader("Goles")
+    seccion("Goles")
     g1, g2 = st.columns(2)
     with g1:
         st.caption("Más de 2.5 goles")
@@ -449,13 +496,13 @@ with tab_eval:
 - **Base**: un "modelo tonto" que siempre dice lo mismo. Hay que ganarle sí o sí.
 - **Casas de apuestas**: la vara más alta. Como el ML usa sus cuotas como una variable más, lo normal es quedar muy cerca.
 """)
-    st.subheader("Calibración")
+    seccion("Calibración")
     st.caption("Si el modelo dice 60%, ¿pasa ~60% de las veces? Mientras más cerca de la diagonal, mejor.")
     k1, k2 = st.columns(2)
     k1.plotly_chart(grafico_calibracion(e["calibracion"], "Prob. que dio el modelo (gana el local)"), width="stretch")
     k2.plotly_chart(grafico_calibracion(e["calibracion_over25"], "Prob. que dio el modelo (más de 2.5)"), width="stretch")
     if "importancia" in ev:
-        st.subheader("¿Qué mira el modelo de ML?")
+        seccion("Qué mira el modelo de ML")
         imp = pd.DataFrame(ev["importancia"][:15], columns=["Variable", "Importancia"]).iloc[::-1]
         fig = go.Figure(go.Bar(x=imp["Importancia"], y=imp["Variable"], orientation="h", marker_color=COLOR["L"]))
         fig.update_layout(height=460, margin=dict(l=0, r=0, t=10, b=0), paper_bgcolor="rgba(0,0,0,0)",
