@@ -2,6 +2,8 @@
 
 Uso: streamlit run app.py
 """
+import html
+import os
 import subprocess
 import sys
 
@@ -17,13 +19,42 @@ from src.prediccion import Predictor
 st.set_page_config(page_title="Predictor Fútbol", page_icon="⚽", layout="wide")
 
 NOMBRE_LIGA = {c: n for c, (n, _, _) in config.LIGAS.items()} | {"CL": "Champions League"}
-COLOR = {"L": "#2e7d32", "E": "#9e9e9e", "V": "#c62828"}
+COLOR = {"L": "#22c55e", "E": "#6b7280", "V": "#ef4444"}
 PCT = st.column_config.NumberColumn(format="%.0f%%")
 DIAS_SEMANA = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 ETIQUETA_MODELO = {"Elo": "Elo (fase 1)", "Poisson": "Poisson (fase 2)", "ML": "Machine learning (fase 3)",
                    "Final": "⭐ Final (stacking, lo que usa la app)", "Base": "Base (siempre la frecuencia)",
                    "Casas": "Casas de apuestas", "Sin lesionados": "Final sin ajuste por lesionados",
                    "Final (con cuotas)": "⭐ Final (mismos partidos)"}
+EN_NUBE = os.environ.get("HOME", "").startswith("/home/adminuser")  # Streamlit Community Cloud
+CUOTAS = ("cuota_l", "cuota_e", "cuota_v", "cuota_o25", "cuota_u25")
+
+st.markdown("""
+<style>
+.stAppDeployButton, footer {display: none;}
+.block-container {padding-top: 1.2rem; padding-bottom: 2rem;}
+.tarjeta {background: #151f33; border: 1px solid #1f2b45; border-radius: 14px; padding: 12px 14px 8px 14px;
+          margin-bottom: 6px;}
+.tarjeta .meta {font-size: 0.78rem; color: #94a3b8; margin-bottom: 4px;}
+.tarjeta .equipos {display: flex; justify-content: space-between; align-items: center; font-weight: 700;
+                   font-size: 1.05rem; margin-bottom: 8px;}
+.tarjeta .equipos .vs {color: #64748b; font-weight: 400; font-size: 0.8rem; padding: 0 8px;}
+.tarjeta .equipos .visita {text-align: right;}
+.barra {display: flex; height: 10px; border-radius: 6px; overflow: hidden; background: #0b1220;}
+.barra span {display: block; height: 100%;}
+.probs {display: flex; justify-content: space-between; font-size: 0.8rem; margin-top: 4px; color: #cbd5e1;}
+.tarjeta .pie {display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.85rem; color: #e2e8f0;}
+.tarjeta .pie b {color: #22c55e;}
+.marcador {display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px;
+           background: #151f33; border-radius: 14px; padding: 16px 18px; margin: 4px 0 10px 0;}
+.marcador .nombre {font-size: 1.25rem; font-weight: 800;}
+.marcador .pct {font-size: 2rem; font-weight: 800; line-height: 1;}
+.marcador .centro {text-align: center; color: #94a3b8; font-size: 0.85rem;}
+.marcador .centro .empate {font-size: 1.3rem; font-weight: 700; color: #cbd5e1;}
+.marcador .visita {text-align: right;}
+div[data-testid="stButton"] > button {border-radius: 10px;}
+</style>
+""", unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------------- datos
@@ -62,7 +93,7 @@ def predecir_fixtures(_pred, version, ligas, dias):
     for r in fx.itertuples():
         if not (_pred.conoce(r.local) and _pred.conoce(r.visita)):
             continue
-        cuotas = {c: getattr(r, c, np.nan) for c in ("cuota_l", "cuota_e", "cuota_v", "cuota_o25", "cuota_u25")}
+        cuotas = {c: getattr(r, c, np.nan) for c in CUOTAS}
         salida.append((r._asdict(), _pred.partido(r.local, r.visita, r.competicion, fecha=r.fecha, cuotas=cuotas)))
     return salida
 
@@ -73,8 +104,38 @@ def favorito(p, local, visita):
     """'Real Madrid 58%' o 'Parejo' si nadie pasa de 45% con ventaja clara."""
     pl, pe, pv = p["L"], p["E"], p["V"]
     if max(pl, pv) < 0.45 and abs(pl - pv) < 0.08:
-        return f"⚖️ Parejo ({pl:.0%} / {pe:.0%} / {pv:.0%})"
+        return "⚖️ Parejo"
     return f"🏠 {local} {pl:.0%}" if pl > pv else f"✈️ {visita} {pv:.0%}"
+
+
+def barra_html(p):
+    return ('<div class="barra">' + "".join(
+        f'<span style="width:{p[k] * 100:.1f}%;background:{COLOR[k]}"></span>' for k in "LEV") + "</div>"
+        f'<div class="probs"><span>{p["L"]:.0%}</span><span>{p["E"]:.0%}</span><span>{p["V"]:.0%}</span></div>')
+
+
+def tarjeta_html(r, p):
+    gl, gv, _ = p["top"][0]
+    hora = "" if pd.isna(r["hora"]) else f" · {r['hora']}"
+    return f"""
+<div class="tarjeta">
+  <div class="meta">{DIAS_SEMANA[r['fecha'].weekday()]} {r['fecha']:%d/%m}{hora} · {NOMBRE_LIGA[r['competicion']]}</div>
+  <div class="equipos"><span class="local">{html.escape(r['local'])}</span><span class="vs">vs</span>
+       <span class="visita">{html.escape(r['visita'])}</span></div>
+  {barra_html(p['1x2'])}
+  <div class="pie"><span><b>{html.escape(favorito(p['1x2'], r['local'], r['visita']))}</b></span>
+       <span>+2.5: {p['over']['2.5']:.0%}</span><span>{gl}-{gv}</span></div>
+</div>"""
+
+
+def marcador_html(local, visita, p):
+    pl, pe, pv = p["1x2"]["L"], p["1x2"]["E"], p["1x2"]["V"]
+    return f"""
+<div class="marcador">
+  <div><div class="nombre">{html.escape(local)}</div><div class="pct" style="color:{COLOR['L']}">{pl:.0%}</div></div>
+  <div class="centro">empate<div class="empate">{pe:.0%}</div></div>
+  <div class="visita"><div class="nombre">{html.escape(visita)}</div><div class="pct" style="color:{COLOR['V']}">{pv:.0%}</div></div>
+</div>"""
 
 
 def forma(partidos, equipo, n=5):
@@ -90,25 +151,14 @@ def forma(partidos, equipo, n=5):
     return filas
 
 
-def barra_probs(p, local, visita):
-    fig = go.Figure()
-    for clave, etiqueta in (("L", local), ("E", "Empate"), ("V", visita)):
-        fig.add_bar(y=[""], x=[p[clave] * 100], orientation="h", name=etiqueta,
-                    marker_color=COLOR[clave], text=f"{etiqueta}<br><b>{p[clave]:.0%}</b>",
-                    textposition="inside", insidetextanchor="middle", hoverinfo="skip")
-    fig.update_layout(barmode="stack", height=90, margin=dict(l=0, r=0, t=0, b=0), showlegend=False,
-                      xaxis=dict(visible=False, range=[0, 100]), yaxis=dict(visible=False))
-    return fig
-
-
 def mapa_marcadores(matriz, local, visita):
     m = np.array(matriz) * 100
     goles = [str(i) for i in range(m.shape[0])]
     fig = go.Figure(go.Heatmap(
-        z=m, x=goles, y=goles, colorscale="Blues", showscale=False,
+        z=m, x=goles, y=goles, colorscale=[[0, "#151f33"], [1, "#22c55e"]], showscale=False,
         text=[[f"{v:.1f}%" for v in fila] for fila in m], texttemplate="%{text}",
         hovertemplate=f"{local} %{{y}} - %{{x}} {visita}: %{{z:.1f}}%<extra></extra>"))
-    fig.update_layout(height=340, margin=dict(l=0, r=0, t=10, b=0),
+    fig.update_layout(height=320, margin=dict(l=0, r=0, t=10, b=0), paper_bgcolor="rgba(0,0,0,0)",
                       xaxis=dict(title=f"Goles de {visita}", side="top"),
                       yaxis=dict(title=f"Goles de {local}", autorange="reversed"))
     return fig
@@ -117,11 +167,11 @@ def mapa_marcadores(matriz, local, visita):
 def grafico_elo(historial, local, visita):
     desde = historial["fecha"].max() - pd.DateOffset(years=4)
     fig = go.Figure()
-    for equipo, color in ((local, "#1565c0"), (visita, "#ef6c00")):
+    for equipo, color in ((local, COLOR["L"]), (visita, COLOR["V"])):
         h = historial[(historial["equipo"] == equipo) & (historial["fecha"] >= desde)]
         fig.add_scatter(x=h["fecha"], y=h["elo"], name=equipo, mode="lines", line=dict(color=color, width=2))
-    fig.update_layout(height=280, margin=dict(l=0, r=0, t=10, b=0), hovermode="x unified",
-                      legend=dict(orientation="h", y=1.1))
+    fig.update_layout(height=260, margin=dict(l=0, r=0, t=10, b=0), hovermode="x unified",
+                      paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", legend=dict(orientation="h", y=1.1))
     return fig
 
 
@@ -129,12 +179,12 @@ def grafico_calibracion(cal, eje_x):
     cal = pd.DataFrame(cal)
     fig = go.Figure()
     fig.add_scatter(x=[0, 1], y=[0, 1], mode="lines", line=dict(dash="dash", color="gray"), name="Perfecto")
-    fig.add_scatter(x=cal["pred"], y=cal["real"], mode="markers+lines", name="Modelo",
+    fig.add_scatter(x=cal["pred"], y=cal["real"], mode="markers+lines", name="Modelo", line=dict(color=COLOR["L"]),
                     marker=dict(size=[max(6, min(22, n / 25)) for n in cal["n"]]),
                     text=[f"{n} partidos" for n in cal["n"]])
     fig.update_layout(height=340, margin=dict(l=0, r=0, t=10, b=0), legend=dict(orientation="h", y=1.1),
-                      xaxis=dict(title=eje_x, tickformat=".0%"),
-                      yaxis=dict(title="Lo que pasó de verdad", tickformat=".0%"))
+                      paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+                      xaxis=dict(title=eje_x, tickformat=".0%"), yaxis=dict(title="Lo que pasó de verdad", tickformat=".0%"))
     return fig
 
 
@@ -157,13 +207,8 @@ def tabla_lesionados(imp):
 
 
 def mostrar_detalle(p, local, visita, cuotas=None, clave=""):
-    """Todo el detalle de un partido (se usa en la lista y en Enfrentamiento)."""
-    m1, m2, m3 = st.columns(3)
-    m1.metric(f"Gana {local}", f"{p['1x2']['L']:.0%}")
-    m2.metric("Empate", f"{p['1x2']['E']:.0%}")
-    m3.metric(f"Gana {visita}", f"{p['1x2']['V']:.0%}")
-    st.plotly_chart(barra_probs(p["1x2"], local, visita), width="stretch", config={"displayModeBar": False},
-                    key=f"barra{clave}")
+    """Todo el detalle de un partido (se usa en la ventana de cada tarjeta y en Enfrentamiento)."""
+    st.markdown(marcador_html(local, visita, p), unsafe_allow_html=True)
     pe, pp, pm = p["elo_1x2"], p["poisson_1x2"], p["ml_1x2"]
     el, ev_ = p["elo_ajustado"]
     fmt = lambda d: f"{d['L']:.0%} / {d['E']:.0%} / {d['V']:.0%}"  # noqa: E731
@@ -177,7 +222,7 @@ def mostrar_detalle(p, local, visita, cuotas=None, clave=""):
         texto += " · cruce entre ligas (se calcula como partido de Champions)"
     st.caption(texto)
 
-    st.markdown("**⚽ Goles**")
+    st.markdown("#### ⚽ Goles")
     ll, lv = p["goles"]
     g1, g2, g3, g4 = st.columns(4)
     g1.metric(f"Esperados {local}", f"{ll:.2f}")
@@ -195,7 +240,7 @@ def mostrar_detalle(p, local, visita, cuotas=None, clave=""):
                                     "Menos de": (1 - p["over"][linea]) * 100} for linea in LINEAS]),
                      hide_index=True, width="stretch", column_config={"Más de": PCT, "Menos de": PCT})
 
-    st.markdown("**🚑 Lesionados**")
+    st.markdown("#### 🚑 Lesionados")
     b1, b2 = st.columns(2)
     for col, equipo, imp in ((b1, local, p["bajas"]["L"]), (b2, visita, p["bajas"]["V"])):
         with col:
@@ -208,22 +253,30 @@ def mostrar_detalle(p, local, visita, cuotas=None, clave=""):
             else:
                 st.caption(f"{equipo}: sin lesionados 🎉")
 
+    st.markdown("#### 📋 Forma reciente")
     f1, f2 = st.columns(2)
     with f1:
-        st.markdown(f"**Últimos 5 · {local}**")
+        st.markdown(f"**{local}**")
         st.markdown("\n".join(f"- {x}" for x in forma(partidos, local)))
     with f2:
-        st.markdown(f"**Últimos 5 · {visita}**")
+        st.markdown(f"**{visita}**")
         st.markdown("\n".join(f"- {x}" for x in forma(partidos, visita)))
+    st.markdown("#### 📈 Evolución del Elo")
     st.plotly_chart(grafico_elo(historial, local, visita), width="stretch", key=f"elo{clave}")
+
+
+@st.dialog("Detalle del partido", width="large")
+def ventana_detalle(r, p):
+    cuotas = {c: r.get(c, np.nan) for c in CUOTAS}
+    mostrar_detalle(p, r["local"], r["visita"], cuotas, clave="dlg")
 
 
 # ---------------------------------------------------------------- barra lateral y carga
 
 with st.sidebar:
     st.title("⚽ Predictor")
-    if st.button("🔄 Actualizar datos", width="stretch",
-                 help="Baja resultados, próximos partidos y lesionados, y reajusta los modelos (~3 min)"):
+    if not EN_NUBE and st.button("🔄 Actualizar datos", width="stretch",
+                                 help="Baja resultados, próximos partidos y lesionados, y reajusta los modelos (~3 min)"):
         with st.spinner("Actualizando…"):
             r = subprocess.run([sys.executable, "actualizar.py", "--rapido"], cwd=config.RAIZ,
                                capture_output=True, text=True)
@@ -247,6 +300,8 @@ with st.sidebar:
     st.caption(f"Lesionados: {pred.fecha_bajas or 'sin datos'}")
     st.caption(f"{len(partidos):,} partidos desde {partidos['fecha'].min():%Y}")
     st.caption("Elo + Poisson + ML (con cuotas) + lesionados, combinados con stacking")
+    if EN_NUBE:
+        st.caption("Se actualiza solo todos los días a la 1:00 a.m. (Perú).")
 
 tab_prox, tab_vs, tab_rank, tab_hist, tab_eval = st.tabs(
     ["📅 Partidos", "⚔️ Enfrentamiento", "🏆 Ranking Elo", "📈 Historial", "📊 ¿Qué tan bueno es?"])
@@ -267,27 +322,14 @@ with tab_prox:
         if not lista:
             st.info("No hay partidos para ese filtro.")
         else:
-            st.caption("Haz clic en un partido para ver el detalle debajo. **+2.5** = probabilidad de 3 goles o más.")
-            filas = []
-            for r, p in lista:
-                gl, gv, _ = p["top"][0]
-                filas.append({"Fecha": f"{DIAS_SEMANA[r['fecha'].weekday()][:3]} {r['fecha']:%d/%m}",
-                              "Hora": "" if pd.isna(r["hora"]) else r["hora"],
-                              "Liga": NOMBRE_LIGA[r["competicion"]],
-                              "Partido": f"{r['local']} vs {r['visita']}",
-                              "Pronóstico": favorito(p["1x2"], r["local"], r["visita"]),
-                              "+2.5": p["over"]["2.5"] * 100, "Marcador": f"{gl}-{gv}"})
-            evento = st.dataframe(pd.DataFrame(filas), hide_index=True, width="stretch",
-                                  height=min(600, 38 + 35 * len(filas)), on_select="rerun",
-                                  selection_mode="single-row", column_config={"+2.5": PCT})
-            sel = evento.selection.rows
-            if sel:
-                r, p = lista[sel[0]]
-                st.subheader(f"{r['local']} vs {r['visita']} · {NOMBRE_LIGA[r['competicion']]} · {r['fecha']:%d/%m}")
-                cuotas = {c: r.get(c, np.nan) for c in ("cuota_l", "cuota_e", "cuota_v")}
-                mostrar_detalle(p, r["local"], r["visita"], cuotas, clave="fx")
-            else:
-                st.info("👆 Selecciona un partido de la lista para ver el detalle.")
+            st.caption("Toca **Ver detalle** en un partido. Barra: 🟩 gana el local · ⬜ empate · 🟥 gana la visita · "
+                       "**+2.5** = probabilidad de 3 goles o más · último número = marcador más probable.")
+            columnas = st.columns(2)
+            for i, (r, p) in enumerate(lista):
+                with columnas[i % 2]:
+                    st.markdown(tarjeta_html(r, p), unsafe_allow_html=True)
+                    if st.button("Ver detalle", key=f"det{i}", width="stretch"):
+                        ventana_detalle(r, p)
 
 
 # ---------------------------------------------------------------- enfrentamiento
@@ -309,8 +351,8 @@ with tab_vs:
         st.warning("Elige dos equipos distintos.")
     else:
         p = pred.partido(local, visita, neutral=neutral, con_bajas=con_bajas)
-        st.caption("Sin cuotas: para un cruce inventado el modelo no las tiene, así que usa solo Elo, goles, forma y lesionados.")
         mostrar_detalle(p, local, visita, clave="vs")
+        st.caption("Para un cruce inventado no hay cuotas, así que el modelo usa solo Elo, goles, forma y lesionados.")
 
 
 # ---------------------------------------------------------------- ranking
@@ -355,8 +397,9 @@ with tab_hist:
             k3.metric("Marcador exacto", f"{res['marcador_acierto']:.0%}")
             pm = pd.DataFrame(res["por_mes"])
             fig = go.Figure(go.Bar(x=pm["mes"], y=pm["acierto"] * 100, text=pm["partidos"].astype(str) + " partidos",
-                                   marker_color="#1565c0"))
-            fig.update_layout(height=260, margin=dict(l=0, r=0, t=10, b=0), yaxis=dict(title="% acierto 1X2"))
+                                   marker_color=COLOR["L"]))
+            fig.update_layout(height=260, margin=dict(l=0, r=0, t=10, b=0), yaxis=dict(title="% acierto 1X2"),
+                              paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
             st.plotly_chart(fig, width="stretch")
         st.caption("Últimas predicciones")
         ult = reg.sort_values("fecha", ascending=False).head(60).copy()
@@ -414,6 +457,7 @@ with tab_eval:
     if "importancia" in ev:
         st.subheader("¿Qué mira el modelo de ML?")
         imp = pd.DataFrame(ev["importancia"][:15], columns=["Variable", "Importancia"]).iloc[::-1]
-        fig = go.Figure(go.Bar(x=imp["Importancia"], y=imp["Variable"], orientation="h", marker_color="#1565c0"))
-        fig.update_layout(height=460, margin=dict(l=0, r=0, t=10, b=0), xaxis=dict(title="Cuánto empeora el log-loss si se desordena"))
+        fig = go.Figure(go.Bar(x=imp["Importancia"], y=imp["Variable"], orientation="h", marker_color=COLOR["L"]))
+        fig.update_layout(height=460, margin=dict(l=0, r=0, t=10, b=0), paper_bgcolor="rgba(0,0,0,0)",
+                          plot_bgcolor="rgba(0,0,0,0)", xaxis=dict(title="Cuánto empeora el log-loss si se desordena"))
         st.plotly_chart(fig, width="stretch")
