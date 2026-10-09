@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-08T13:12",
+  "actualizado": "2026-10-09T12:55",
   "elo": {
     "k": 15,
     "ventaja_local": 80
@@ -36,7 +36,7 @@
   },
   "bajas": {
     "elo_por_log_valor": 102.0506148053588,
-    "log_goles_por_elo": 0.003016929950133343,
+    "log_goles_por_elo": 0.00301692992956467,
     "factor_reemplazo": 0.5,
     "clubes": 296
   },
